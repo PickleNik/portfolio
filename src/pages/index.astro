@@ -1,9 +1,11 @@
 ---
-import Socials from "../components/socials.astro";
-import Nav from "../components/nav.astro";
+import Hero from "../components/Hero.astro";
+import Project1 from "../components/Project1.astro";
+import Contact from "../components/Contact.astro";
+import NavIsland from "../components/NavIsland.astro";
 ---
 
-<html lang="en">
+<html lang="en" class="overflow-x-hidden bg-black">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,15 +15,11 @@ import Nav from "../components/nav.astro";
     <title>PickleNik</title>
   </head>
   <body>
-    <h1 class="absolute left-8 top-8 font-mono text-4xl font-bold italic">
-      PickleNik
-    </h1>
-    <h1
-      class="absolute left-8 top-8 -z-10 font-mono text-4xl font-bold italic text-red-400"
-    >
-      PortfoLio
-    </h1>
-    <Socials />
-    <Nav />
+    <NavIsland />
+    <main>
+      <Hero />
+      <Project1 />
+      <Contact />
+    </main>
   </body>
 </html>
