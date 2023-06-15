@@ -1,0 +1,127 @@
+<section
+  class="relative flex min-h-screen w-full justify-between bg-[hsl(192,53%,8%)] portrait:flex-col landscape:items-center"
+>
+  <div class="relative p-12 landscape:h-screen">
+    <div
+      class="left-4 top-4 flex min-w-max flex-col items-start gap-4 lg:left-12 lg:top-12 xl:left-24 xl:top-24 landscape:absolute"
+    >
+      <h1 class="text-3xl font-bold md:text-5xl">Serenity</h1>
+      <h3 class="opacity-50">Prototype</h3>
+      <div class="flex gap-4">
+        <div
+          class="rounded-xl bg-[hsl(153,47%,23%)] p-2 text-[#4FC08D]"
+          style="box-shadow: inset 0 0 1rem -0.25rem #4FC08D, 0 0 1rem -0.25rem #4FC08D;"
+        >
+          <svg
+            role="img"
+            viewBox="0 0 24 24"
+            class="h-5 w-5 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Vue.js</title>
+            <path
+              d="M24,1.61H14.06L12,5.16,9.94,1.61H0L12,22.39ZM12,14.08,5.16,2.23H9.59L12,6.41l2.41-4.18h4.43Z"
+            ></path>
+          </svg>
+        </div>
+        <div
+          class="rounded-xl bg-[hsl(189,95%,23%)] p-2 text-[hsl(189,95%,63%)]"
+          style="box-shadow: inset 0 0 1rem -0.25rem #06B6D4, 0 0 1rem -0.25rem #06B6D4;"
+        >
+          <svg
+            role="img"
+            viewBox="0 0 24 24"
+            class="h-5 w-5 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Tailwind CSS</title>
+            <path
+              d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="relative mx-auto flex h-[90dvh] w-[90dvh] items-center justify-center gap-4 rounded-full portrait:h-[90dvw] portrait:w-[90dvw]"
+    style="box-shadow: 0 0 15rem 3rem #1e5462"
+  >
+    <div class="flex w-3/4 flex-col items-center gap-4">
+      <div class="hoverer group relative rounded-2xl duration-500">
+        <img
+          class="h-auto max-w-full rounded-3xl duration-300 group-hover:scale-150"
+          alt="Serenity Home Page"
+          src="/serenity_main.png"
+        />
+        <div
+          class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full bg-[#1e5462] p-2 text-xs font-bold text-white duration-1000 group-hover:opacity-0 group-hover:duration-0"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 fill-current"
+            viewBox="0 -960 960 960"
+          >
+            <path
+              d="M366-232q-15 10-30.5 1T320-258v-450q0-18 15.5-27t30.5 1l354 226q14 9 14 25t-14 25L366-232Z"
+            ></path>
+          </svg>
+        </div>
+        <video
+          height="1080px"
+          width="1920px"
+          autoplay
+          loop
+          class="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-3xl opacity-0 duration-300 group-hover:scale-150 group-hover:opacity-100"
+          src="/serenity.mov"></video>
+      </div>
+    </div>
+
+    <!-- <div class="flex w-1/4 flex-col justify-center gap-4"> -->
+    <!-- TODO: show mobile video on mobile in the middle (code above) -->
+    <!-- <div class="hoverer group relative rounded-2xl duration-300">
+        <img
+          class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-x-[160%] group-hover:scale-150"
+          alt="Serenity Mobile Home Page"
+          src="/serenity_mobile_main.png"
+        />
+        <div
+          class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full bg-[#1e5462] p-2 text-xs font-bold text-white duration-1000 group-hover:opacity-0 group-hover:duration-0"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 fill-current"
+            viewBox="0 -960 960 960"
+          >
+            <path
+              d="M366-232q-15 10-30.5 1T320-258v-450q0-18 15.5-27t30.5 1l354 226q14 9 14 25t-14 25L366-232Z"
+            ></path>
+          </svg>
+        </div>
+        <video
+          width="1080px"
+          height="1920px"
+          autoplay
+          loop
+          class="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-2xl opacity-0 duration-300 group-hover:-translate-x-[210%] group-hover:scale-150 group-hover:opacity-100"
+          src="/serenity_mobile.mov"></video>
+      </div>-->
+    <!-- </div> -->
+  </div>
+
+  <div class="flex justify-start p-12 landscape:h-screen"></div>
+</section>
+
+<style>
+  .hoverer {
+    box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0);
+    /* duration-0 */
+    transition: box-shadow 0s ease-in-out !important;
+  }
+  .hoverer:hover {
+    z-index: 1;
+    /* hover:duration-500 */
+    transition: box-shadow 0.25s ease-in-out !important;
+    box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0.5);
+  }
+</style>
