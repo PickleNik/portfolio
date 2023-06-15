@@ -2,6 +2,7 @@
 import Live from "../components/Live.astro";
 ---
 
+<!-- TODO: cleanup, separate socials into component with props, technologies into its own component each --><!-- add interactive, sound icons and labels bottom left of card -->
 <section
   class="relative flex min-h-screen w-full justify-between bg-[#121212] portrait:flex-col landscape:items-center"
 >
@@ -18,7 +19,7 @@ import Live from "../components/Live.astro";
       </h3>
       <div class="flex gap-4">
         <div
-          class="rounded-xl border-[hsl(155,100%,33%)] bg-[hsl(155,100%,13%)] p-2 text-[#00DC82]"
+          class="rounded-xl bg-[hsl(155,100%,13%)] p-2 text-[#00DC82]"
           style="box-shadow: inset 0 0 1rem -0.25rem #00DC82, 0 0 1rem -0.25rem #00DC82;"
         >
           <svg
@@ -34,7 +35,7 @@ import Live from "../components/Live.astro";
           </svg>
         </div>
         <div
-          class="rounded-xl border-[hsl(212,78%,52%)] bg-[hsl(212,78%,12%)] p-2 text-[hsl(212,78%,62%)]"
+          class="rounded-xl bg-[hsl(212,78%,12%)] p-2 text-[hsl(212,78%,62%)]"
           style="box-shadow: inset 0 0 1rem -0.25rem hsl(212, 78%, 62%), 0 0 1rem -0.25rem hsl(212, 78%, 62%);"
         >
           <svg
@@ -67,11 +68,6 @@ import Live from "../components/Live.astro";
       </div>
     </div>
     <div class="flex w-2/4 flex-col items-center gap-4">
-      <!-- <img
-        class="h-auto max-w-full rounded-2xl border border-neutral-800"
-        alt="Return YouTube Dislike Docs Page"
-        src="/ryd_docs.png"
-      /> -->
       <div class="flex max-w-full gap-4">
         <div class="hoverer group rounded-2xl duration-300">
           <img
@@ -122,11 +118,6 @@ import Live from "../components/Live.astro";
           />
         </div>
       </div>
-      <!-- <img
-        class="h-auto max-w-full rounded-2xl border border-neutral-800"
-        alt="Return YouTube Dislike Install Page"
-        src="/ryd_install.png"
-      /> -->
     </div>
 
     <div class="flex w-1/4 flex-col justify-center gap-4">
