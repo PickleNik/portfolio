@@ -77,34 +77,38 @@ import Live from "../components/Live.astro";
         alt="Return YouTube Dislike Home Page Mobile"
         src="/ryd_home_mobile.png"
       />
-      <!-- <img
-        class="h-auto rounded-lg border border-neutral-800"
-        alt="Return YouTube Dislike Extension Popup"
-        src="/ryd_panel_main.png"
-      />
-      <img
-        class="h-auto rounded-lg border border-neutral-800"
-        alt="Return YouTube Dislike Extension Settings Popup"
-        src="/ryd_panel_settings.png"
-      /> -->
     </div>
     <div class="flex w-2/4 flex-col gap-4">
-      <img
+      <!-- <img
         class="h-auto max-w-full rounded-2xl border border-neutral-800"
         alt="Return YouTube Dislike Docs Page"
         src="/ryd_docs.png"
-      />
+      /> -->
+      <div class="flex max-w-full gap-4">
+        <img
+          class="rounded-xl border border-neutral-800"
+          style="width: calc(50% - 0.5rem);"
+          alt="Return YouTube Dislike Extension Popup"
+          src="/ryd_panel_main.png"
+        />
+        <img
+          class="rounded-xl border border-neutral-800"
+          style="width: calc(50% - 0.5rem);"
+          alt="Return YouTube Dislike Extension Settings Popup"
+          src="/ryd_panel_settings.png"
+        />
+      </div>
       <div class="hoverer group relative rounded-2xl duration-500">
         <img
-          class="h-auto max-w-full rounded-2xl border border-neutral-800 duration-300 group-hover:scale-[1.9]"
+          class="h-auto max-w-full rounded-2xl border border-neutral-800 duration-300 group-hover:scale-[2]"
           alt="Return YouTube Dislike Home Page"
           src="/ryd_main.png"
         />
-        <div
+        <!-- <div
           class="absolute left-2 top-2 flex items-center rounded-full bg-[#ff4444] pr-2 text-xs font-bold duration-1000 group-hover:opacity-0 group-hover:duration-0"
         >
           <Live /> Live
-        </div>
+        </div> -->
         <iframe
           height="1080px"
           width="1920px"
@@ -112,24 +116,24 @@ import Live from "../components/Live.astro";
           src="https://returnyoutubedislike.com/"
           title="Return YouTube Dislike"></iframe>
       </div>
-      <img
+      <!-- <img
         class="h-auto max-w-full rounded-2xl border border-neutral-800"
         alt="Return YouTube Dislike Install Page"
         src="/ryd_install.png"
-      />
+      /> -->
+      <div class="hoverer group w-2/3 rounded-2xl duration-300">
+        <img
+          class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-y-[100%] group-hover:scale-150"
+          alt="Return YouTube Dislike Extension Changelog Page"
+          src="/ryd_changelog.png"
+        />
+      </div>
     </div>
 
     <div class="flex w-1/4 flex-col justify-center gap-4">
       <div class="hoverer group rounded-2xl duration-300">
         <img
-          class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-x-[150%] group-hover:translate-y-[150%] group-hover:scale-[3]"
-          alt="Return YouTube Dislike Extension Changelog Page"
-          src="/ryd_changelog.png"
-        />
-      </div>
-      <div class="hoverer group rounded-2xl duration-300">
-        <img
-          class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-x-[160%] group-hover:-translate-y-[30%] group-hover:scale-[1.5]"
+          class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-x-[160%] group-hover:scale-150"
           alt="Return YouTube Dislike Links Page Mobile"
           src="/ryd_links_mobile.png"
         />
