@@ -2,69 +2,52 @@
 import Live from "../components/Live.astro";
 ---
 
-<section
-  class="relative flex min-h-screen w-full flex-col justify-center bg-[#121212]"
->
-  <div
-    class="absolute left-24 top-24 flex h-0 min-w-max flex-col items-start gap-4"
-  >
-    <h1 class="bg-[#121212] text-5xl font-bold">
-      Return YouTube <br /> Dislike
-    </h1>
-    <h3 class="opacity-50">
-      Browser extension and website <br /> for API that shows you <br /> dislikes
-      on Youtube
-    </h3>
-    <div class="flex gap-4">
-      <div
-        class="rounded-xl border-[hsl(155,100%,33%)] bg-[hsl(155,100%,13%)] p-2 text-[#00DC82]"
-        style="box-shadow: inset 0 0 1rem -0.25rem #00DC82, 0 0 1rem -0.25rem #00DC82;"
-      >
-        <svg
-          role="img"
-          viewBox="0 0 24 24"
-          class="h-5 w-5 fill-current"
-          xmlns="http://www.w3.org/2000/svg"
+<section class="relative flex min-h-screen w-full items-center bg-[#121212]">
+  <div class="relative h-screen">
+    <div
+      class="absolute left-24 top-24 flex h-0 min-w-max flex-col items-start gap-4"
+    >
+      <h1 class="bg-[#121212] text-5xl font-bold">
+        Return YouTube <br /> Dislike
+      </h1>
+      <h3 class="opacity-50">
+        Browser extension and website <br /> for API that shows you <br /> dislikes
+        on Youtube
+      </h3>
+      <div class="flex gap-4">
+        <div
+          class="rounded-xl border-[hsl(155,100%,33%)] bg-[hsl(155,100%,13%)] p-2 text-[#00DC82]"
+          style="box-shadow: inset 0 0 1rem -0.25rem #00DC82, 0 0 1rem -0.25rem #00DC82;"
         >
-          <title>Nuxt.js</title>
-          <path
-            d="M13.4642 19.8295h8.9218c.2834 0 .5618-.0723.8072-.2098a1.5899 1.5899 0 0 0 .5908-.5732 1.5293 1.5293 0 0 0 .216-.783 1.529 1.529 0 0 0-.2167-.7828L17.7916 7.4142a1.5904 1.5904 0 0 0-.5907-.573 1.6524 1.6524 0 0 0-.807-.2099c-.2833 0-.5616.0724-.807.2098a1.5904 1.5904 0 0 0-.5907.5731L13.4642 9.99l-2.9954-5.0366a1.5913 1.5913 0 0 0-.591-.573 1.6533 1.6533 0 0 0-.8071-.2098c-.2834 0-.5617.0723-.8072.2097a1.5913 1.5913 0 0 0-.591.573L.2168 17.4808A1.5292 1.5292 0 0 0 0 18.2635c-.0001.2749.0744.545.216.783a1.59 1.59 0 0 0 .5908.5732c.2454.1375.5238.2098.8072.2098h5.6003c2.219 0 3.8554-.9454 4.9813-2.7899l2.7337-4.5922L16.3935 9.99l4.3944 7.382h-5.8586ZM7.123 17.3694l-3.9083-.0009 5.8586-9.8421 2.9232 4.921-1.9572 3.2892c-.7478 1.1967-1.5972 1.6328-2.9163 1.6328z"
-          ></path>
-        </svg>
+          <svg
+            role="img"
+            viewBox="0 0 24 24"
+            class="h-5 w-5 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Nuxt.js</title>
+            <path
+              d="M13.4642 19.8295h8.9218c.2834 0 .5618-.0723.8072-.2098a1.5899 1.5899 0 0 0 .5908-.5732 1.5293 1.5293 0 0 0 .216-.783 1.529 1.529 0 0 0-.2167-.7828L17.7916 7.4142a1.5904 1.5904 0 0 0-.5907-.573 1.6524 1.6524 0 0 0-.807-.2099c-.2833 0-.5616.0724-.807.2098a1.5904 1.5904 0 0 0-.5907.5731L13.4642 9.99l-2.9954-5.0366a1.5913 1.5913 0 0 0-.591-.573 1.6533 1.6533 0 0 0-.8071-.2098c-.2834 0-.5617.0723-.8072.2097a1.5913 1.5913 0 0 0-.591.573L.2168 17.4808A1.5292 1.5292 0 0 0 0 18.2635c-.0001.2749.0744.545.216.783a1.59 1.59 0 0 0 .5908.5732c.2454.1375.5238.2098.8072.2098h5.6003c2.219 0 3.8554-.9454 4.9813-2.7899l2.7337-4.5922L16.3935 9.99l4.3944 7.382h-5.8586ZM7.123 17.3694l-3.9083-.0009 5.8586-9.8421 2.9232 4.921-1.9572 3.2892c-.7478 1.1967-1.5972 1.6328-2.9163 1.6328z"
+            ></path>
+          </svg>
+        </div>
+        <div
+          class="rounded-xl border-[hsl(212,78%,52%)] bg-[hsl(212,78%,12%)] p-2 text-[hsl(212,78%,62%)]"
+          style="box-shadow: inset 0 0 1rem -0.25rem hsl(212, 78%, 62%), 0 0 1rem -0.25rem hsl(212, 78%, 62%);"
+        >
+          <svg
+            role="img"
+            viewBox="0 0 24 24"
+            class="h-5 w-5 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Vuetify</title>
+            <path
+              d="M7.094 0L12 11.596 16.906 0H7.094zM1.5 3.5L12 24 22.5 3.5H17L12 15 7 3.5z"
+            ></path>
+          </svg>
+        </div>
       </div>
-      <div
-        class="rounded-xl border-[hsl(212,78%,52%)] bg-[hsl(212,78%,12%)] p-2 text-[hsl(212,78%,62%)]"
-        style="box-shadow: inset 0 0 1rem -0.25rem hsl(212, 78%, 62%), 0 0 1rem -0.25rem hsl(212, 78%, 62%);"
-      >
-        <svg
-          role="img"
-          viewBox="0 0 24 24"
-          class="h-5 w-5 fill-current"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>Vuetify</title>
-          <path
-            d="M7.094 0L12 11.596 16.906 0H7.094zM1.5 3.5L12 24 22.5 3.5H17L12 15 7 3.5z"
-          ></path>
-        </svg>
-      </div>
-      <!-- <div
-        class="h-9 w-9 overflow-hidden rounded-lg border-[#F7DF1E] bg-black p-2 text-[#F7DF1E]"
-        style="box-shadow: inset 0 0 1rem -0.25rem #F7DF1E, 0 0 1rem -0.25rem #000;"
-      >
-        <svg
-          role="img"
-          viewBox="0 0 24 24"
-          class="h-5 w-5 fill-current"
-          style="filter: drop-shadow(0 0 0.25rem #000);"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>JavaScript</title>
-          <path
-            d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"
-          ></path>
-        </svg>
-      </div> -->
     </div>
   </div>
   <div
@@ -195,7 +178,7 @@ import Live from "../components/Live.astro";
     .hoverer:hover {
       z-index: 1;
       /* hover:duration-500 */
-      transition: box-shadow 0.5s ease-in-out !important;
+      transition: box-shadow 0s ease-in-out !important;
       box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0.5);
     }
   </style>
