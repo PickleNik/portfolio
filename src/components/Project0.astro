@@ -1,0 +1,30 @@
+---
+import Tailwind from "./tools/Tailwind.astro";
+import Socials from "./Socials.astro";
+import Astr from "./tools/Astr.astro";
+---
+
+<section
+  class="relative flex min-h-screen w-full justify-between bg-gradient-to-b from-black via-black to-[#121212] portrait:flex-col landscape:items-center"
+>
+  <div class="relative p-12 landscape:h-screen">
+    <div
+      class="left-4 top-4 flex min-w-max flex-col items-start gap-4 lg:left-12 lg:top-12 xl:left-24 xl:top-24 landscape:absolute"
+    >
+      <h1 class="font-mono text-4xl font-bold italic">PickleNik</h1>
+      <h1 class="font-mono text-4xl font-bold italic text-red-400">
+        PortfoLio
+      </h1>
+      <div class="flex gap-4">
+        <Tailwind />
+        <Astr />
+      </div>
+      <Socials />
+    </div>
+  </div>
+  <div class="flex h-full w-full flex-col items-center justify-center">
+    <h1 class="text-6xl font-bold">Hello World</h1>
+    <p class="text-xl">Lorem ipsum dolor sit amet consectetur.</p>
+  </div>
+  <div class="p-12"></div>
+</section>
