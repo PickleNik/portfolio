@@ -11,24 +11,36 @@ import Live from "./Live.astro";
   class="relative min-h-screen w-full bg-gradient-to-b from-[#121212] via-black to-black"
 >
   <div
-    class="absolute left-96 top-48 h-96 w-96 rounded-full bg-pink-400 opacity-30"
+    class="animate-star absolute left-44 top-12 h-1 w-1 rounded-full bg-amber-200"
   >
   </div>
   <div
-    class="absolute left-96 top-96 h-96 w-96 rounded-full bg-emerald-400 opacity-30"
+    class="animate-star absolute left-12 top-44 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 1.25s;"
   >
   </div>
   <div
-    class="absolute bottom-96 right-96 h-96 w-96 rounded-full bg-orange-400 opacity-30"
+    class="animate-star absolute left-20 top-12 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 4.33s;"
   >
   </div>
   <div
-    class="absolute bottom-48 right-96 h-96 w-96 rounded-full bg-purple-400 opacity-30"
+    class="animate-star absolute left-80 top-44 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 6.55s;"
   >
   </div>
   <div
-    class="z-10 flex justify-between backdrop-blur-3xl portrait:flex-col landscape:items-center"
+    class="animate-star absolute bottom-12 left-20 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 7.66s;"
   >
+  </div>
+  <div
+    class="animate-star absolute bottom-80 left-20 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 1s;"
+  >
+  </div>
+  <!-- !! used-to-have backdrop-blur -->
+  <div class="flex justify-between portrait:flex-col landscape:items-center">
     <div class="relative p-12 landscape:h-screen">
       <div
         class="left-4 top-4 flex min-w-max flex-col items-start gap-4 lg:left-12 lg:top-12 xl:left-24 xl:top-24 landscape:absolute"
@@ -56,69 +68,94 @@ import Live from "./Live.astro";
     </div>
     <!-- middle -->
     <div
-      class="relative mx-auto flex h-[90dvh] w-[90dvh] items-center gap-4 rounded-full portrait:h-[90dvw] portrait:w-[90dvw]"
-      style="box-shadow: 0 0 5rem -1rem #fff4"
+      class="relative mx-auto h-[90dvh] w-[90dvh] rounded-full portrait:h-[90dvw] portrait:w-[90dvw]"
+      style="box-shadow: 0 0 5rem -1rem #fff4;"
     >
-      <div class="flex w-1/4 flex-col justify-center gap-4">
-        <div class="hoverer group rounded-2xl duration-300">
-          <img
-            class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:translate-x-[160%] group-hover:scale-150"
-            alt="RealZoo Home Page Mobile"
-            src="/rz_mobile_main.png"
-          />
+      <div class="absolute h-full w-full overflow-hidden rounded-full">
+        <div
+          class="animate-blob absolute left-44 top-44 h-96 w-96 origin-bottom-right rounded-full bg-red-400 opacity-30"
+        >
+        </div>
+        <div
+          class="animate-blob absolute right-44 top-44 h-96 w-96 origin-bottom-left rounded-full bg-emerald-400 opacity-30"
+          style="animation-delay: 0.5s; animation-direction: reverse;"
+        >
+        </div>
+        <div
+          class="animate-blob absolute bottom-44 right-44 h-96 w-96 origin-top-left rounded-full bg-yellow-400 opacity-30"
+          style="animation-delay: 0.75s; animation-direction: alternate"
+        >
+        </div>
+        <div
+          class="animate-blob absolute bottom-44 left-44 h-96 w-96 origin-top-right rounded-full bg-blue-400 opacity-30"
+          style="animation-delay: -1s; animation-direction: alternate-reverse;"
+        >
         </div>
       </div>
-      <div class="flex w-2/4 flex-col items-center gap-4">
-        <div class="hoverer group w-2/3 rounded-2xl duration-300">
-          <img
-            class="pointer-events-none rounded-xl border border-neutral-800 duration-500 group-hover:translate-x-[50%] group-hover:translate-y-[115%] group-hover:scale-150"
-            alt="RealZoo Roadmap Page"
-            src="/rz_roadmap.png"
-          />
-        </div>
-        <div class="hoverer group relative rounded-2xl duration-500">
-          <img
-            class="h-auto max-w-full rounded-2xl border border-neutral-800 duration-300 group-hover:scale-[2]"
-            alt="RealZoo Home Page"
-            src="/rz_main.png"
-          />
-          <div
-            class="absolute bottom-2 left-2 flex items-center rounded-full bg-[#ff4444] pr-2 text-xs font-bold duration-1000 group-hover:opacity-0 group-hover:duration-0"
-          >
-            <Live /> Live
+      <div
+        class="flex h-full w-full items-center gap-4 rounded-full backdrop-blur-3xl"
+      >
+        <div class="flex w-1/4 flex-col justify-center gap-4">
+          <div class="hoverer group rounded-2xl duration-300">
+            <img
+              class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:translate-x-[160%] group-hover:scale-150"
+              alt="RealZoo Home Page Mobile"
+              src="/rz_mobile_main.png"
+            />
           </div>
-          <iframe
-            height="1080px"
-            width="1920px"
-            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.21] rounded-[4rem] border-8 border-neutral-800 opacity-0 duration-300 group-hover:scale-50 group-hover:opacity-100"
-            src="https://realzoo.itsyipy.com/"
-            title="RealZoo"></iframe>
         </div>
-        <div class="flex max-w-full gap-4">
+        <div class="flex w-2/4 flex-col items-center gap-4">
           <div class="hoverer group w-2/3 rounded-2xl duration-300">
             <img
-              class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-y-[110%] group-hover:translate-x-[30%] group-hover:scale-[2.5]"
-              alt="RealZoo Redesign Reaction"
-              src="/rz_poggers.png"
+              class="pointer-events-none rounded-xl border border-neutral-800 duration-500 group-hover:translate-x-[50%] group-hover:translate-y-[115%] group-hover:scale-150"
+              alt="RealZoo Roadmap Page"
+              src="/rz_roadmap.png"
             />
           </div>
-          <div class="hoverer group w-1/3 rounded-xl duration-300">
+          <div class="hoverer group relative rounded-2xl duration-500">
             <img
-              class="pointer-events-none h-auto max-w-full rounded-xl border border-neutral-800 duration-500 group-hover:-translate-x-[100%] group-hover:-translate-y-[110%] group-hover:scale-[2.5]"
-              alt="RealZoo Breeding Popup"
-              src="/rz_funni.png"
+              class="h-auto max-w-full rounded-2xl border border-neutral-800 duration-300 group-hover:scale-[2]"
+              alt="RealZoo Home Page"
+              src="/rz_main.png"
             />
+            <div
+              class="absolute bottom-2 left-2 flex items-center rounded-full bg-[#ff4444] pr-2 text-xs font-bold duration-1000 group-hover:opacity-0 group-hover:duration-0"
+            >
+              <Live /> Live
+            </div>
+            <iframe
+              height="1080px"
+              width="1920px"
+              class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.21] rounded-[4rem] border-8 border-neutral-800 opacity-0 duration-300 group-hover:scale-50 group-hover:opacity-100"
+              src="https://realzoo.itsyipy.com/"
+              title="RealZoo"></iframe>
+          </div>
+          <div class="flex max-w-full gap-4">
+            <div class="hoverer group w-1/2 rounded-2xl duration-300">
+              <img
+                class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-y-[110%] group-hover:translate-x-[30%] group-hover:scale-[2.5]"
+                alt="RealZoo Redesign Reaction"
+                src="/rz_poggers.png"
+              />
+            </div>
+            <div class="hoverer group w-1/2 rounded-xl duration-300">
+              <img
+                class="pointer-events-none h-auto max-w-full rounded-xl border border-neutral-800 duration-500 group-hover:-translate-x-[100%] group-hover:-translate-y-[110%] group-hover:scale-[2.5]"
+                alt="RealZoo Breeding Popup"
+                src="/rz_funni.png"
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="flex w-1/4 flex-col justify-center gap-4">
-        <div class="hoverer group rounded-2xl duration-300">
-          <img
-            class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-x-[160%] group-hover:scale-150"
-            alt="Return YouTube Dislike Links Page Mobile"
-            src="/rz_mobile_roadmap.png"
-          />
+        <div class="flex w-1/4 flex-col justify-center gap-4">
+          <div class="hoverer group rounded-2xl duration-300">
+            <img
+              class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-x-[160%] group-hover:scale-150"
+              alt="Return YouTube Dislike Links Page Mobile"
+              src="/rz_mobile_roadmap.png"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -148,5 +185,31 @@ import Live from "./Live.astro";
     /* hover:duration-500 */
     transition: box-shadow 0.25s ease-in-out !important;
     box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0.5);
+  }
+  .animate-star {
+    animation: star 10.1s infinite;
+  }
+  @keyframes star {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      filter: blur(1rem);
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .animate-blob {
+    animation: blob 10s linear infinite;
+  }
+  @keyframes blob {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
   }
 </style>
