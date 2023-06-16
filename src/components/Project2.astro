@@ -75,7 +75,12 @@ import Live from "./Live.astro";
       <div
         class="left-4 top-4 flex min-w-max flex-col items-start gap-4 lg:left-12 lg:top-12 xl:left-24 xl:top-24 landscape:absolute"
       >
-        <h1 class="text-3xl font-bold md:text-5xl">RealZoo</h1>
+        <h1
+          class="text-3xl font-bold text-black md:text-5xl"
+          style="text-shadow: -0.2rem -0.2rem #fff, 0.2rem 0.2rem #fff, -0.2rem 0.2rem #fff, 0.2rem -0.2rem #fff"
+        >
+          RealZoo
+        </h1>
         <div class="flex gap-2">
           <h2
             class="rounded-full border border-red-300 bg-red-500 bg-opacity-50 px-2"
@@ -224,6 +229,8 @@ import Live from "./Live.astro";
   .hoverer {
     box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0);
     /* duration-0 */
+    /* transform: translate3d(0, 0, 0); */
+    will-change: box-shadow;
     transition: box-shadow 0s ease-in-out !important;
   }
   .hoverer:hover {
