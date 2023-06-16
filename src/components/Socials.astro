@@ -31,7 +31,11 @@ const { github, discord, twitter, mail, kofi, link } = Astro.props;
       {discord && (
         <a
           href={discord}
-          class="group rounded-lg p-2 duration-300 hover:scale-110 hover:rounded-xl hover:bg-[#5865F2]"
+          class={`group rounded-lg p-2 ${
+            link
+              ? "hover:rounded-xl"
+              : "rounded-r-3xl pr-[0.66rem] hover:rounded-l-xl"
+          } duration-300 hover:scale-110 hover:bg-[#5865F2]`}
           rel="noreferrer"
           target="_blank"
         >
@@ -49,7 +53,11 @@ const { github, discord, twitter, mail, kofi, link } = Astro.props;
       {twitter && (
         <a
           href={twitter}
-          class="group rounded-lg p-2 duration-300 hover:scale-110 hover:rounded-xl hover:bg-[#1DA1F2]"
+          class={`group rounded-lg p-2 ${
+            mail
+              ? "hover:rounded-xl"
+              : "rounded-r-3xl pr-[0.66rem] hover:rounded-l-xl"
+          } duration-300 hover:scale-110 hover:bg-[#1DA1F2]`}
           rel="noreferrer"
           target="_blank"
         >
