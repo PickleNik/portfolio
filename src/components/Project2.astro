@@ -1,4 +1,5 @@
 ---
+import Socials from "./Socials.astro";
 import Tailwind from "./tools/Tailwind.astro";
 import Astr from "./tools/Astr.astro";
 import Vue from "./tools/Vue.astro";
@@ -43,7 +44,11 @@ import Live from "./Live.astro";
     </div>
   </div>
 
-  <div class="flex justify-start p-12 landscape:h-screen"></div>
+  <div class="flex justify-start p-12 landscape:h-screen">
+    <div class="bottom-24 left-24 landscape:absolute">
+      <Socials github="https://github.com/VueTubeApp/VueTube-site-v2" />
+    </div>
+  </div>
 </section>
 
 <style>

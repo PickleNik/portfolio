@@ -1,4 +1,5 @@
 ---
+// 'class' is a default Astro.props object key
 const { github, discord, twitter, mail, kofi, link } = Astro.props;
 ---
 
@@ -8,7 +9,11 @@ const { github, discord, twitter, mail, kofi, link } = Astro.props;
       {github && (
         <a
           href={github}
-          class="group rounded-l-3xl rounded-r-lg p-2 pl-[0.66rem] duration-300 hover:scale-110 hover:bg-white"
+          class={`group rounded-l-3xl p-2 ${
+            Object.keys(Astro.props).length > 2
+              ? "rounded-r-lg pl-[0.66rem]"
+              : "rounded-r-3xl"
+          } duration-300 hover:scale-110 hover:bg-white`}
           rel="noreferrer"
           target="_blank"
         >
@@ -80,7 +85,11 @@ const { github, discord, twitter, mail, kofi, link } = Astro.props;
       {kofi && (
         <a
           href={kofi}
-          class="group rounded-lg p-2 duration-300 hover:scale-110 hover:rounded-xl hover:bg-[#FF5E5B]"
+          class={`group rounded-lg p-2 ${
+            link
+              ? "hover:rounded-xl"
+              : "rounded-r-3xl pr-[0.66rem] hover:rounded-l-xl"
+          } duration-300 hover:scale-110 hover:bg-[#FF5E5B]`}
           rel="noreferrer"
           target="_blank"
         >
