@@ -135,12 +135,21 @@ import Live from "./Live.astro";
           </div>
         </div>
         <div class="flex w-2/4 flex-col items-center gap-4">
-          <div class="hoverer group w-2/3 rounded-2xl duration-300">
-            <img
-              class="pointer-events-none rounded-xl border border-neutral-800 duration-500 group-hover:translate-x-[50%] group-hover:translate-y-[115%] group-hover:scale-150"
-              alt="RealZoo Roadmap Page"
-              src="/rz_roadmap.png"
-            />
+          <div class="flex max-w-full gap-4">
+            <div class="hoverer group w-[60%] rounded-2xl duration-300">
+              <img
+                class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:translate-x-[30%] group-hover:translate-y-[110%] group-hover:scale-[2.5]"
+                alt="RealZoo Redesign Reaction"
+                src="/rz_poggers.png"
+              />
+            </div>
+            <div class="hoverer group w-[40%] rounded-xl duration-300">
+              <img
+                class="pointer-events-none h-auto max-w-full rounded-xl border border-neutral-800 duration-500 group-hover:-translate-x-[100%] group-hover:translate-y-[110%] group-hover:scale-[2.5]"
+                alt="RealZoo Breeding Popup"
+                src="/rz_funni.png"
+              />
+            </div>
           </div>
           <div class="hoverer group relative rounded-2xl duration-500">
             <img
@@ -161,18 +170,18 @@ import Live from "./Live.astro";
               title="RealZoo"></iframe>
           </div>
           <div class="flex max-w-full gap-4">
-            <div class="hoverer group w-1/2 rounded-2xl duration-300">
+            <div class="hoverer group w-[30%] rounded-2xl duration-300">
               <img
-                class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-y-[110%] group-hover:translate-x-[30%] group-hover:scale-[2.5]"
-                alt="RealZoo Redesign Reaction"
-                src="/rz_poggers.png"
+                class="pointer-events-none h-48 rounded-xl border border-neutral-800 duration-500 group-hover:-translate-y-[115%] group-hover:translate-x-[110%] group-hover:scale-150"
+                alt="RealZoo Card"
+                src="/rz_card.jpeg"
               />
             </div>
-            <div class="hoverer group w-1/2 rounded-xl duration-300">
+            <div class="hoverer group w-[70%] rounded-2xl duration-300">
               <img
-                class="pointer-events-none h-auto max-w-full rounded-xl border border-neutral-800 duration-500 group-hover:-translate-x-[100%] group-hover:-translate-y-[110%] group-hover:scale-[2.5]"
-                alt="RealZoo Breeding Popup"
-                src="/rz_funni.png"
+                class="pointer-events-none h-48 rounded-xl border border-neutral-800 duration-500 group-hover:-translate-x-[50%] group-hover:-translate-y-[115%] group-hover:scale-150"
+                alt="RealZoo Cards"
+                src="/rz_cards.jpeg"
               />
             </div>
           </div>
@@ -217,16 +226,20 @@ import Live from "./Live.astro";
     box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0.5);
   }
   .animate-star {
-    filter: blur(1rem);
-    animation: star 10.1s infinite alternate;
+    /* filter: blur(1rem); */
+    filter: blur(1px);
+    opacity: 0;
+    animation: star 5.1s infinite alternate;
   }
   @keyframes star {
     0% {
-      filter: blur(1rem);
-      transform: scale(5);
+      opacity: 0;
+      /* filter: blur(1rem); */
+      transform: scale(2);
     }
     100% {
-      filter: blur(1px);
+      opacity: 1;
+      /* filter: blur(1px); */
       transform: scale(1);
     }
   }
