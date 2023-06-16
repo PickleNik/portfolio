@@ -136,12 +136,19 @@ import Live from "./Live.astro";
         </div>
         <div class="flex w-2/4 flex-col items-center gap-4">
           <div class="flex max-w-full gap-4">
-            <div class="hoverer group w-[60%] rounded-2xl duration-300">
+            <div
+              class="hoverer group relative w-[60%] rounded-2xl duration-300"
+            >
               <img
                 class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:translate-x-[30%] group-hover:translate-y-[110%] group-hover:scale-[2.5]"
                 alt="RealZoo Redesign Reaction"
                 src="/rz_poggers.png"
               />
+              <div
+                class="absolute bottom-2 left-2 flex items-center rounded-full bg-[#ff4444] pr-2 text-xs font-bold duration-1000 group-hover:opacity-0 group-hover:duration-0"
+              >
+                <Live /> Live Redesign Reaction
+              </div>
             </div>
             <div class="hoverer group w-[40%] rounded-xl duration-300">
               <img
