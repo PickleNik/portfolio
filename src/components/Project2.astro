@@ -39,6 +39,36 @@ import Live from "./Live.astro";
     style="animation-delay: 1s;"
   >
   </div>
+  <div
+    class="animate-star absolute right-80 top-44 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 3.55s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute bottom-36 right-20 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 8.66s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute bottom-44 right-20 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 2s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute right-12 top-20 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 9.55s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute right-44 top-96 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 4.66s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute bottom-36 right-80 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 3s;"
+  >
+  </div>
   <!-- !! used-to-have backdrop-blur -->
   <div class="flex justify-between portrait:flex-col landscape:items-center">
     <div class="relative p-12 landscape:h-screen">
@@ -68,32 +98,32 @@ import Live from "./Live.astro";
     </div>
     <!-- middle -->
     <div
-      class="relative mx-auto h-[90dvh] w-[90dvh] rounded-full portrait:h-[90dvw] portrait:w-[90dvw]"
-      style="box-shadow: 0 0 5rem -1rem #fff4;"
+      class="relative mx-auto h-[90dvh] w-[90dvh] rounded-full bg-[#111] portrait:h-[90dvw] portrait:w-[90dvw]"
     >
       <div class="absolute h-full w-full overflow-hidden rounded-full">
         <div
-          class="animate-blob absolute left-44 top-44 h-96 w-96 origin-bottom-right rounded-full bg-red-400 opacity-30"
+          class="animate-blob absolute left-44 top-44 h-96 w-96 origin-bottom-right rounded-full bg-red-500 opacity-30"
         >
         </div>
         <div
-          class="animate-blob absolute right-44 top-44 h-96 w-96 origin-bottom-left rounded-full bg-emerald-400 opacity-30"
+          class="animate-blob absolute right-44 top-44 h-96 w-96 origin-bottom-left rounded-full bg-emerald-500 opacity-30"
           style="animation-delay: 0.5s; animation-direction: reverse;"
         >
         </div>
         <div
-          class="animate-blob absolute bottom-44 right-44 h-96 w-96 origin-top-left rounded-full bg-yellow-400 opacity-30"
+          class="animate-blob absolute bottom-44 right-44 h-96 w-96 origin-top-left rounded-full bg-yellow-500 opacity-30"
           style="animation-delay: 0.75s; animation-direction: alternate"
         >
         </div>
         <div
-          class="animate-blob absolute bottom-44 left-44 h-96 w-96 origin-top-right rounded-full bg-blue-400 opacity-30"
+          class="animate-blob absolute bottom-44 left-44 h-96 w-96 origin-top-right rounded-full bg-indigo-500 opacity-30"
           style="animation-delay: -1s; animation-direction: alternate-reverse;"
         >
         </div>
       </div>
       <div
-        class="flex h-full w-full items-center gap-4 rounded-full backdrop-blur-3xl"
+        class="flex h-[100.1%] w-[100.1%] items-center gap-4 rounded-[49.9%] backdrop-blur-3xl"
+        style="box-shadow: 0 0 5rem #fff2, inset 5rem 5rem 10rem -1rem #fff2, -5rem -5rem 10rem -1rem #0002;"
       >
         <div class="flex w-1/4 flex-col justify-center gap-4">
           <div class="hoverer group rounded-2xl duration-300">
@@ -187,17 +217,16 @@ import Live from "./Live.astro";
     box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0.5);
   }
   .animate-star {
-    animation: star 10.1s infinite;
+    filter: blur(1rem);
+    animation: star 10.1s infinite alternate;
   }
   @keyframes star {
     0% {
-      transform: scale(1);
-    }
-    50% {
       filter: blur(1rem);
-      transform: scale(2);
+      transform: scale(5);
     }
     100% {
+      filter: blur(1px);
       transform: scale(1);
     }
   }
