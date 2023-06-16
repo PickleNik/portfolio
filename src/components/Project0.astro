@@ -36,13 +36,22 @@ import Astr from "./tools/Astr.astro";
     </div>
   </div>
   <img
-    class="absolute right-24 top-24"
+    class="absolute right-12 top-12 lg:right-24 lg:top-24"
     alt="GitHub Repo stars"
     src="https://img.shields.io/github/stars/PickleNik/portfolio?color=%23ffaa00"
   />
-  <div class="flex h-full w-full flex-col items-center justify-center">
-    <h1 class="text-6xl font-bold">Hello World</h1>
-    <p class="text-xl">Lorem ipsum dolor sit amet consectetur.</p>
+  <div
+    class="flex h-full w-full flex-col items-center justify-center text-neutral-400"
+  >
+    <!-- <h1 class="text-6xl font-bold">Hello World</h1>
+    <p class="text-xl">Lorem ipsum dolor sit amet consectetur.</p> -->
+    // todo: links navigate down to projects, mdx is pulled from github and rendered
+    by astro
+    <img
+      class="max-w-screen-md rounded-3xl landscape:w-1/2"
+      src="/hub.png"
+      alt="github mdx placeholder"
+    />
   </div>
   <div class="flex justify-center p-12">
     <div class="bottom-24 left-24 landscape:absolute">
