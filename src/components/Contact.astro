@@ -3,10 +3,17 @@ import Socials from "../components/Socials.astro";
 ---
 
 <section
-  class="flex h-screen flex-col items-center justify-center bg-gradient-to-b from-[hsl(192,53%,8%)] via-transparent to-transparent"
+  class="flex h-screen flex-col items-center justify-center bg-gradient-to-b from-[hsl(192,53%,8%)] via-transparent to-transparent pt-[9.625rem]"
+  style="height: calc(100vh - 9.625rem);"
 >
-  <h1 class="text-6xl font-bold">Contact</h1>
-  <!-- Todo: paper plane, in front and behind text -->
-  <p class="text-xl">Lorem ipsum dolor sit amet consectetur.</p>
-  <Socials />
+  <div
+    class="flex h-[50dvh] w-[90dvh] flex-col items-center justify-center gap-2 rounded-3xl bg-white/5 portrait:h-[50dvw] portrait:w-[90dvw]"
+  >
+    <h1 class="text-6xl font-bold">Contact</h1>
+    <!-- Todo: paper plane, in front and behind text -->
+    <p class="text-xl text-neutral-600">
+      Lorem ipsum dolor sit amet consectetur.
+    </p>
+    <Socials />
+  </div>
 </section>

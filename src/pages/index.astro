@@ -6,6 +6,7 @@ import Project3 from "../components/Project3.astro";
 import Project4 from "../components/Project4.astro";
 import Contact from "../components/Contact.astro";
 import NavIsland from "../components/NavIsland.astro";
+import Socials from "../components/Socials.astro";
 ---
 
 <html lang="en" class="overflow-x-hidden bg-black">
@@ -27,5 +28,33 @@ import NavIsland from "../components/NavIsland.astro";
       <Contact />
     </main>
     <!-- <NavIsland /> -->
+    <footer
+      class="mx-auto grid w-[90dvh] grid-cols-3 p-12 pb-24 pt-0 portrait:w-[90dvw]"
+    >
+      <div class="flex items-center text-sm text-white/50">
+        Copyleft © {new Date().getFullYear()} PickleNik.
+      </div>
+      <div class="flex justify-center">
+        <Socials
+          github="https://github.com/PickleNik"
+          discord="https://discord.com/users/714555429618843650"
+          twitter="https://twitter.com/picklenik0864"
+          mail="mailto:email@gmail.com"
+          kofi="https://ko-fi.com/picklenik"
+        />
+      </div>
+      <a
+        href="#"
+        class="flex cursor-pointer items-center justify-end text-white/50 decoration-wavy duration-300 hover:text-white hover:underline hover:underline-offset-4 active:scale-90"
+      >
+        ^^^^ scroll back to top
+      </a>
+    </footer>
   </body>
 </html>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
