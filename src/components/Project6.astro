@@ -1,19 +1,19 @@
 ---
 import Tailwind from "./tools/Tailwind.astro";
-import React from "./tools/React.astro";
-import Next from "./tools/Next.astro";
-import Prisma from "./tools/Prisma.astro";
+import Vue from "./tools/Vue.astro";
 ---
 
 <section
-  class="relative flex min-h-screen w-full justify-between portrait:flex-col landscape:items-center"
+  class="relative flex min-h-screen w-full justify-between bg-[hsl(192,53%,8%)] portrait:flex-col landscape:items-center"
 >
   <div class="relative p-12 landscape:h-screen">
     <div
       class="left-4 top-4 flex min-w-max flex-col items-start gap-4 lg:left-12 lg:top-12 xl:left-24 xl:top-24 landscape:absolute"
     >
-      <h1 class="text-3xl font-bold leading-3 md:text-5xl">
-        type <br /> hero
+      <h1
+        class="text-2xl font-bold uppercase tracking-[1rem] text-[#c4e5ec] md:text-4xl"
+      >
+        Serenity
       </h1>
       <div class="flex gap-2">
         <!-- TODO: move to emvoice -->
@@ -33,11 +33,9 @@ import Prisma from "./tools/Prisma.astro";
           Offline
         </h2>
       </div>
-      <h3 class="opacity-50">Typescript challenges platform</h3>
+      <h3 class="opacity-50">Landing page</h3>
       <div class="flex gap-4">
-        <Next />
-        <Prisma />
-        <React />
+        <Vue />
         <Tailwind />
       </div>
     </div>
@@ -45,16 +43,16 @@ import Prisma from "./tools/Prisma.astro";
   <!-- middle -->
   <div
     class="relative mx-auto flex h-[90dvh] w-[90dvh] items-center justify-center gap-4 rounded-full portrait:h-[90dvw] portrait:w-[90dvw]"
-    style="box-shadow: 0 0 3rem 0 #8888"
+    style="box-shadow: 0 0 15rem 3rem #1e5462"
   >
     <div class="flex w-3/4 flex-col items-center gap-4">
       <div class="hoverer group relative rounded-2xl duration-500">
-        <!-- <img
+        <img
           class="h-auto max-w-full rounded-3xl duration-300 group-hover:scale-150"
           alt="Serenity Home Page"
           src="/serenity_main.png"
-        /> -->
-        <!-- <div
+        />
+        <div
           class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full bg-[#1e5462] p-2 text-xs font-bold text-white duration-1000 group-hover:opacity-0 group-hover:duration-0"
         >
           <svg
@@ -66,7 +64,7 @@ import Prisma from "./tools/Prisma.astro";
               d="M366-232q-15 10-30.5 1T320-258v-450q0-18 15.5-27t30.5 1l354 226q14 9 14 25t-14 25L366-232Z"
             ></path>
           </svg>
-        </div> -->
+        </div>
         <!-- <video
           height="1080px"
           width="1920px"

@@ -1,0 +1,85 @@
+---
+import Socials from "./Socials.astro";
+import Tailwind from "./tools/Tailwind.astro";
+import Astr from "./tools/Astr.astro";
+import Vue from "./tools/Vue.astro";
+import Live from "./Live.astro";
+---
+
+<section
+  class="relative flex min-h-screen w-full justify-between bg-gradient-to-b from-black via-black to-[hsl(192,53%,8%)] portrait:flex-col landscape:items-center"
+>
+  <div class="relative p-12 landscape:h-screen">
+    <div
+      class="left-4 top-4 flex min-w-max flex-col items-start gap-4 lg:left-12 lg:top-12 xl:left-24 xl:top-24 landscape:absolute"
+    >
+      <h1
+        class="bg-[url('https://media1.giphy.com/media/l378oRMuApI3a35Cg/giphy.gif')] bg-clip-text bg-center text-3xl font-bold text-transparent hue-rotate-90 invert md:text-5xl"
+      >
+        VueTube Site
+      </h1>
+      <div class="flex gap-2">
+        <h2
+          class="rounded-full border border-cyan-300 bg-cyan-500 bg-opacity-50 px-2"
+        >
+          Work In Progress
+        </h2>
+        <h2
+          class="rounded-full border border-yellow-300 bg-yellow-500 bg-opacity-50 px-2"
+        >
+          Prototype
+        </h2>
+      </div>
+      <h3 class="opacity-50">VueTube website</h3>
+      <div class="flex gap-4">
+        <Astr />
+        <Vue />
+        <Tailwind />
+      </div>
+    </div>
+  </div>
+  <!-- middle -->
+  <div
+    class="relative mx-auto flex h-[90dvh] w-[90dvh] items-center justify-center gap-4 rounded-full portrait:h-[90dvw] portrait:w-[90dvw]"
+    style="box-shadow: 0 0 5rem -1rem #fff4"
+  >
+    <div class="flex w-3/4 flex-col items-center gap-4">
+      <div class="hoverer group relative rounded-2xl duration-500">
+        <img
+          class="h-auto max-w-full rounded-3xl border border-neutral-800 duration-300 group-hover:scale-150"
+          alt="The VueTube Landing Page Of All Time"
+          src="/vuetube_landing.png"
+        />
+        <!-- TODO: iframe goes here -->
+        <div
+          class="absolute bottom-2 left-2 flex items-center rounded-full bg-[#ff4444] pr-2 text-xs font-bold duration-1000 group-hover:opacity-0 group-hover:duration-0"
+        >
+          <Live /> Live
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-start p-12 landscape:h-screen">
+    <div class="bottom-24 left-24 landscape:absolute">
+      <Socials
+        github="https://github.com/VueTubeApp/VueTube-site-v2"
+        link="https://vuetube.missingprogram.me/"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hoverer {
+    box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0);
+    /* duration-0 */
+    transition: box-shadow 0s ease-in-out !important;
+  }
+  .hoverer:hover {
+    z-index: 1;
+    /* hover:duration-500 */
+    transition: box-shadow 0.25s ease-in-out !important;
+    box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0.5);
+  }
+</style>
