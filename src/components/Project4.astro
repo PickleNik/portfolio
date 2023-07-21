@@ -1,12 +1,13 @@
 ---
 import Socials from "./Socials.astro";
-import Capacitor from "./tools/Astr.astro";
-import Vuetify from "./tools/Tailwind.astro";
-import Vue from "./tools/Vue.astro";
+import Capacitor from "./tools/Capacitor.astro";
+import Vuetify from "./tools/Vuetify.astro";
+import Nuxt from "./tools/Nuxt.astro";
+import Tailwind from "./tools/Tailwind.astro";
 ---
 
 <section
-  class="relative flex min-h-screen w-full justify-between portrait:flex-col landscape:items-center"
+  class="relative flex min-h-screen w-full snap-center justify-between portrait:flex-col landscape:items-center"
 >
   <div class="absolute top-0 flex w-full gap-4 p-4">
     <div class="h-40 flex-1 rounded-xl border border-neutral-600"></div>
@@ -57,9 +58,10 @@ import Vue from "./tools/Vue.astro";
       </div>
       <h3 class="opacity-50">An alternative video streaming client</h3>
       <div class="flex gap-4">
+        <Nuxt />
+        <Tailwind />
         <Capacitor />
         <Vuetify />
-        <Vue />
       </div>
     </div>
   </div>

@@ -11,7 +11,10 @@ import NavIsland from "../components/NavIsland.astro";
 import Socials from "../components/Socials.astro";
 ---
 
-<html lang="en" class="overflow-x-hidden scroll-smooth bg-black">
+<html
+  lang="en"
+  class="snap-y snap-mandatory overflow-x-hidden scroll-smooth bg-black"
+>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -21,6 +24,7 @@ import Socials from "../components/Socials.astro";
     <title>PickleNik</title>
   </head>
   <body>
+    <!-- class="grid grid-cols-3 gap-4 hover:grid-cols-1" -->
     <main>
       <Project0 />
       <Project1 />
@@ -33,7 +37,7 @@ import Socials from "../components/Socials.astro";
     </main>
     <!-- <NavIsland /> -->
     <footer
-      class="mx-auto grid w-[90dvh] grid-cols-3 p-12 pb-24 pt-0 portrait:w-[90dvw]"
+      class="mx-auto grid w-[90dvh] snap-end grid-cols-3 p-12 pb-24 pt-0 portrait:w-[90dvw]"
     >
       <div class="flex items-center text-sm text-white/50">
         Copyleft © {new Date().getFullYear()} PickleNik.
@@ -49,7 +53,7 @@ import Socials from "../components/Socials.astro";
       </div>
       <a
         href="#"
-        class="flex cursor-pointer items-center justify-end text-white/50 decoration-wavy duration-300 hover:text-white hover:underline hover:underline-offset-4 active:scale-90"
+        class="flex cursor-pointer items-center justify-end text-white/50 decoration-wavy underline-offset-0 duration-300 hover:text-white hover:underline hover:underline-offset-4 active:scale-90"
       >
         ^^^^ scroll back to top
       </a>

@@ -1,11 +1,11 @@
 ---
 import Tailwind from "./tools/Tailwind.astro";
 import Socials from "./Socials.astro";
-import Astr from "./tools/Astr.astro";
+import Astr from "./tools/Astro.astro";
 ---
 
 <section
-  class="relative flex min-h-screen w-full justify-between bg-gradient-to-b from-black via-black to-[#121212] portrait:flex-col landscape:items-center"
+  class="relative flex min-h-screen w-full snap-center justify-between bg-gradient-to-b from-black via-black to-[#121212] portrait:flex-col landscape:items-center"
 >
   <div class="relative p-12 landscape:h-screen">
     <div
@@ -54,9 +54,9 @@ import Astr from "./tools/Astr.astro";
     /> -->
     <div class="relative -mt-20 w-full skew-y-[15deg] md:ml-auto md:w-1/2">
       <div
-        class="relative flex flex-row-reverse gap-4 overflow-x-auto rounded-l-3xl px-48 py-8"
+        class="relative flex snap-x snap-mandatory flex-row-reverse gap-4 overflow-x-auto rounded-l-3xl px-48 py-8"
       >
-        <div class="flex flex-col gap-4">
+        <div class="flex snap-center flex-col gap-4">
           <b
             class="-mb-2 flex max-w-min items-center bg-gradient-to-r from-indigo-400 from-35% via-pink-400 to-orange-400 bg-clip-text pl-2 text-xl font-bold text-transparent"
           >
@@ -83,7 +83,7 @@ import Astr from "./tools/Astr.astro";
           >
           </div>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex snap-center flex-col gap-4">
           <b class="-mb-2 pl-2 text-xl font-bold">2022</b>
           <div
             class="h-48 w-96 cursor-pointer rounded-2xl border border-neutral-600 bg-neutral-800 duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:border-neutral-400 hover:bg-neutral-700"
@@ -94,7 +94,7 @@ import Astr from "./tools/Astr.astro";
           >
           </div>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex snap-center flex-col gap-4">
           <b class="-mb-2 pl-2 text-xl font-bold">2021</b>
           <div
             class="h-48 w-96 cursor-pointer rounded-2xl border border-neutral-600 bg-neutral-800 duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:border-neutral-400 hover:bg-neutral-700"
@@ -105,14 +105,14 @@ import Astr from "./tools/Astr.astro";
           >
           </div>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex snap-center flex-col gap-4">
           <b class="-mb-2 pl-2 text-xl font-bold">2020</b>
           <div
             class="h-48 w-96 cursor-pointer rounded-2xl border border-neutral-600 bg-neutral-800 duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:border-neutral-400 hover:bg-neutral-700"
           >
           </div>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex snap-center flex-col gap-4">
           <b class="-mb-2 pl-2 text-xl font-bold">2019</b>
           <div
             class="h-48 w-96 cursor-pointer rounded-2xl border border-neutral-600 bg-neutral-800 duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:border-neutral-400 hover:bg-neutral-700"
@@ -123,7 +123,7 @@ import Astr from "./tools/Astr.astro";
           >
           </div>
         </div>
-        <div class="flex flex-col gap-4">
+        <div class="flex snap-center flex-col gap-4">
           <!-- todo: text-gradient -->
           <b class="-mb-2 pl-2 text-xl font-bold">2017</b>
           <div
