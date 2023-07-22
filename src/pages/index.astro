@@ -22,14 +22,6 @@ import Socials from "../components/Socials.astro";
     <meta name="generator" content={Astro.generator} />
     <meta name="color-scheme" content="dark only" />
     <title>PickleNik</title>
-    <script>
-      // Remove all extra htmx headers, re-add content-type.
-      document.body.addEventListener("htmx:configRequest", function (event) {
-        event.detail.headers = "";
-        event.detail.headers["Content-Type"] =
-          "application/x-www-form-urlencoded; charset=UTF-8";
-      });
-    </script>
   </head>
   <body>
     <!-- class="grid grid-cols-3 gap-4 hover:grid-cols-1" -->
