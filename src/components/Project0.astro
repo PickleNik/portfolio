@@ -4,11 +4,10 @@ import Socials from "./Socials.astro";
 import Astr from "./tools/Astro.astro";
 import Htmx from "./tools/Htmx.astro";
 
-const response = await fetch(
-  "https://api.github.com/repos/picklenik/portfolio"
-);
+const response = await fetch("https://api.github.com/repos/picklenik/portfolio", {
+  headers: {Authentication: `Bearer ${import.meta.env.GH_TKN}`}
+});
 const data = await response.json();
-console.log(data.stargazers_count);
 const stargazers = data.stargazers_count;
 ---
 
