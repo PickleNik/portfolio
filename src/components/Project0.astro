@@ -2,7 +2,17 @@
 import Tailwind from "./tools/Tailwind.astro";
 import Socials from "./Socials.astro";
 import Astr from "./tools/Astro.astro";
+import Htmx from "./tools/Htmx.astro";
+import Stars from "./Stars.html";
 ---
+
+<script
+  src="https://unpkg.com/htmx.org@1.9.3"
+  integrity="sha384-lVb3Rd/Ca0AxaoZg5sACe8FJKF0tnUgR2Kd7ehUOG5GCcROv5uBIZsOqovBAcWua"
+  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"
+></script>
+<script src="https://unpkg.com/mustache@latest"></script>
 
 <section
   class="relative flex min-h-screen w-full snap-center justify-between bg-gradient-to-b from-black via-black to-[#121212] portrait:flex-col landscape:items-center"
@@ -11,7 +21,7 @@ import Astr from "./tools/Astro.astro";
     <div
       class="left-4 top-4 flex min-w-max flex-col items-start gap-4 lg:left-12 lg:top-12 xl:left-24 xl:top-24 landscape:absolute"
     >
-      <h1 class="font-mono text-4xl font-bold italic">PickleNik</h1>
+      <h1 class="text-3xl font-bold md:text-5xl">PickleNik</h1>
       <div class="flex gap-2">
         <h2
           class="rounded-full border-red-300 bg-red-500 bg-opacity-50 px-2 text-red-100"
@@ -32,14 +42,29 @@ import Astr from "./tools/Astro.astro";
       <div class="flex gap-4">
         <Astr />
         <Tailwind />
+        <Htmx />
       </div>
     </div>
   </div>
-  <img
+  <!-- <img
     class="absolute right-12 top-12 lg:right-24 lg:top-24"
     alt="GitHub Repo stars"
     src="https://img.shields.io/github/stars/PickleNik/portfolio?color=%23ffaa00"
-  />
+  /> -->
+
+  <template id="stars">
+    <p is:raw>⭐️ <b>Stars</b> {{ stargazers_count }}</p>
+  </template>
+  <div
+    hx-trigger="load"
+    mustache-template="stars"
+    hx-ext="client-side-templates"
+    class="absolute right-12 top-12 lg:right-24 lg:top-24"
+    hx-get="https://api.github.com/repos/picklenik/portfolio"
+  >
+    ⭐️ <b>Stars</b> 0
+  </div>
+
   <div
     class="flex h-full w-full flex-col items-center justify-center text-neutral-400"
   >
