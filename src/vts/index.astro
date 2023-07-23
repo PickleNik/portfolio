@@ -1,0 +1,58 @@
+---
+import Project from "../components/ProjecTemplate.astro";
+
+import Prototype from "../components/status/Prototype.astro";
+import WorkInProgress from "../components/status/WIP.astro";
+
+import Tailwind from "../components/tools/Tailwind.astro";
+import Astr from "../components/tools/Astro.astro";
+import Vue from "../components/tools/Vue.astro";
+import Live from "../components/Live.astro";
+
+import Socials from "../components/Socials.astro";
+
+import { Image } from "astro:assets";
+import vuetube_landing from "./vuetube_landing.png";
+---
+
+<Project class="bg-gradient-to-b from-black via-black to-[hsl(192,53%,8%)]">
+  <span
+    slot="title"
+    class="bg-black bg-clip-text bg-center font-bold text-transparent hue-rotate-90 invert"
+  >
+    <!-- bg-[url('https://media1.giphy.com/media/l378oRMuApI3a35Cg/giphy.gif')] -->
+    VueTube Site
+  </span>
+  <WorkInProgress slot="status" />
+  <Prototype slot="status" />
+  <span slot="description">VueTube Website</span>
+  <Astr slot="stack" />
+  <Vue slot="stack" />
+  <Tailwind slot="stack" />
+  <Socials
+    github="https://github.com/VueTubeApp/VueTube-site-v2"
+    link="https://vuetube.missingprogram.me/"
+    slot="links"
+  />
+  <div
+    slot="middle"
+    class="relative mx-auto flex h-full w-full items-center justify-center gap-4 rounded-full"
+    style="box-shadow: 0 0 5rem -1rem #fff4"
+  >
+    <div class="flex w-3/4 flex-col items-center gap-4">
+      <div class="hoverer group relative rounded-2xl duration-500">
+        <Image
+          class="h-auto max-w-full rounded-3xl border border-neutral-800 duration-300 group-hover:scale-150"
+          alt="The VueTube Landing Page Of All Time"
+          src={vuetube_landing}
+        />
+        <!-- TODO: iframe goes here -->
+        <div
+          class="absolute bottom-2 left-2 flex items-center rounded-full bg-red-600 pr-2 text-xs font-bold duration-1000 group-hover:opacity-0 group-hover:duration-0"
+        >
+          <Live /> Live
+        </div>
+      </div>
+    </div>
+  </div>
+</Project>

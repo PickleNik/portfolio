@@ -1,0 +1,74 @@
+---
+import Project from "../components/ProjecTemplate.astro";
+
+import WorkInProgress from "../components/status/WIP.astro";
+
+import Capacitor from "../components/tools/Capacitor.astro";
+import Vuetify from "../components/tools/Vuetify.astro";
+import Nuxt from "../components/tools/Nuxt.astro";
+import Tailwind from "../components/tools/Tailwind.astro";
+
+import Socials from "../components/Socials.astro";
+---
+
+<Project>
+  <span
+    slot="title"
+    class="bg-gradient-to-r from-[#43d392] to-[#6288f2] bg-clip-text font-bold text-transparent"
+  >
+    VueTube
+  </span>
+  <WorkInProgress slot="status" />
+  <span slot="description">An alternative video streaming client</span>
+  <Nuxt slot="stack" />
+  <Tailwind slot="stack" />
+  <Capacitor slot="stack" />
+  <Vuetify slot="stack" />
+  <Socials
+    github="https://github.com/VueTubeApp/VueTube-site-v2"
+    link="https://vuetube.app/"
+    slot="links"
+  />
+  <div
+    slot="middle"
+    class="relative mx-auto flex h-full w-full items-center justify-center gap-4 rounded-full backdrop-blur-sm"
+    style="box-shadow: 0 0 5rem -1rem #fff4"
+  >
+    <div class="flex w-3/4 flex-col items-center gap-4">
+      <div class="hoverer group relative rounded-2xl duration-500">
+        <!-- <img
+        class="h-auto max-w-full rounded-3xl border border-neutral-800 duration-300 group-hover:scale-150"
+        alt="The VueTube Landing Page Of All Time"
+        src="/vuetube_landing.png"
+      /> -->
+        <!-- TODO: iframe goes here -->
+      </div>
+    </div>
+  </div>
+  <div class="absolute top-0 flex w-full gap-4 p-4">
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+  </div>
+  <div class="absolute top-48 flex w-full gap-4 p-4">
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+  </div>
+  <div class="absolute top-96 flex w-full gap-4 p-4">
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+    <div class="h-40 flex-1 rounded-2xl border-2 border-neutral-800"></div>
+  </div>
+</Project>

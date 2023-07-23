@@ -1,5 +1,5 @@
 ---
-import Project from "../components/Project.astro";
+import Project from "../components/ProjecTemplate.astro";
 
 import Completed from "../components/status/Completed.astro";
 import Offline from "../components/status/Offline.astro";
@@ -8,7 +8,9 @@ import Tailwind from "../components/tools/Tailwind.astro";
 import Vue from "../components/tools/Vue.astro";
 
 import { Image } from "astro:assets";
+import serenity from "./serenity.webm";
 import serenity_main from "./serenity_main.png";
+import serenity_mobile from "./serenity_mobile.webm";
 import serenity_mobile_main from "./serenity_mobile_main.png";
 ---
 
@@ -47,12 +49,13 @@ import serenity_mobile_main from "./serenity_mobile_main.png";
           </svg>
         </div>
         <!-- <video
-        height="1080px"
-        width="1920px"
-        autoplay
-        loop
-        class="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-3xl opacity-0 duration-300 group-hover:scale-150 group-hover:opacity-100"
-        src="/serenity.mov"></video> -->
+          height="1080px"
+          width="1920px"
+          autoplay
+          loop
+          class="absolute left-1/2 top-1/2 z-50 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-3xl opacity-0 duration-300 group-hover:scale-150 group-hover:opacity-100"
+          controls
+          src={serenity}></video> -->
         <!-- TODO: only autoplay on hover -->
       </div>
     </div>
@@ -84,7 +87,7 @@ import serenity_mobile_main from "./serenity_mobile_main.png";
         autoplay
         loop
         class="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-2xl opacity-0 duration-300 group-hover:-translate-x-[210%] group-hover:scale-150 group-hover:opacity-100"
-        src="/serenity_mobile.mov"></video>
+        src={serenity_mobile}></video>
     </div>-->
     <!-- </div> -->
   </div>
