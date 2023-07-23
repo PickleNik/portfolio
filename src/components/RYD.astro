@@ -1,60 +1,33 @@
 ---
+import Project from "./Project.astro";
+
+import LiveStatus from "./status/Live.astro";
+import Completed from "./status/Completed.astro";
+
 import Vuetify from "./tools/Vuetify.astro";
 import Socials from "./Socials.astro";
 import Nuxt from "./tools/Nuxt.astro";
 import Live from "./Live.astro";
 ---
 
-<section
-  class="relative flex min-h-screen w-full snap-center justify-between bg-[#121212] hover:rounded-none portrait:flex-col landscape:items-center"
->
-  <!-- scale-50 hover:scale-100 rounded-[5rem] hover:rounded-none duration-300 -->
-  <div class="relative p-12 landscape:h-screen">
-    <div
-      class="left-4 top-4 flex min-w-max flex-col items-start gap-4 lg:left-12 lg:top-12 xl:left-24 xl:top-24 landscape:absolute"
-    >
-      <h1 class="text-3xl font-bold md:text-5xl">Return YouTube Dislike</h1>
-      <div class="flex gap-2">
-        <h2
-          class="rounded-full border border-red-300 bg-red-500 bg-opacity-50 px-2"
-        >
-          Live
-        </h2>
-        <h2
-          class="rounded-full border border-emerald-300 bg-emerald-500 bg-opacity-50 px-2"
-        >
-          Completed
-        </h2>
-      </div>
-      <!-- TODO: move to tutstree -->
-      <!-- !! abandoned label -->
-      <!-- <h2
-        class="rounded-full border border-orange-300 bg-orange-500 bg-opacity-50 px-2"
-      >
-        Abandoned
-      </h2> -->
-      <!-- TODO: move to vcnt -->
-      <!-- !! modified label -->
-      <!-- <div class="flex gap-2">
-        <h2
-          class="rounded-full border border-indigo-300 bg-indigo-500 bg-opacity-50 px-2"
-        >
-          Modified
-        </h2>
-      </div> -->
-      <h3 class="opacity-50">
-        Browser extension and website <br /> for API that shows you <br /> dislikes
-        on Youtube
-      </h3>
-      <div class="flex gap-4">
-        <Nuxt />
-        <Vuetify />
-      </div>
-    </div>
-  </div>
-  <!-- middle -->
+<Project>
+  <span slot="title">Return YouTube Dislike</span>
+  <Completed slot="status" />
+  <LiveStatus slot="status" />
+  <span slot="description">
+    Browser extension and website <br /> for API that shows you <br /> dislikes on
+    Youtube
+  </span>
+  <Nuxt slot="stack" />
+  <Vuetify slot="stack" />
+  <Socials
+    github="https://github.com/Anarios/return-youtube-dislike"
+    link="https://returnyoutubedislike.com"
+    slot="links"
+  />
+
   <div
-    class="relative z-10 mx-auto flex h-[90dvh] w-[90dvh] items-center gap-4 rounded-full bg-[#f222] portrait:h-[90dvw] portrait:w-[90dvw]"
+    class="relative z-10 mx-auto flex h-full w-full items-center gap-4 rounded-full bg-[#f222]"
     style="box-shadow: 0 0 15rem 3rem #f222, inset -15rem -15rem 15rem 0 #0008, inset 12rem 12rem 0 #fff8"
   >
     <!-- inset 9rem -9rem rgb(53, 7, 7), inset 10rem -10rem 0 #222, inset 10.5rem -10.5rem 0 #f44, inset 12rem -12rem 0 #222, inset 12.5rem -12.5rem 0 #f44, inset 14rem -14rem 0 #222, inset 14.5rem -14.5rem 0 #f44, inset 16rem -16rem 0 #222, inset 16.5rem -16.5rem 0 #f44, inset 18rem -18rem 0 #222, inset 18.5rem -18.5rem 0 #f44, inset 20rem -20rem 0 #222, inset 20.5rem -20.5rem 0 #f44, inset 22rem -22rem 0 #222, inset 22.5rem -22.5rem 0 #f44, inset 24rem -24rem 0 #222, inset 24.5rem -24.5rem 0 #f44, inset 26rem -26rem 0 #222, inset 26.5rem -26.5rem 0 #f44, inset 28rem -28rem 0 #222, inset 28.5rem -28.5rem 0 #f44, inset 200rem -200rem 0 #222 -->
@@ -93,7 +66,8 @@ import Live from "./Live.astro";
         <div
           class="absolute bottom-2 left-2 flex items-center rounded-full bg-[#ff4444] pr-2 text-xs font-bold duration-1000 group-hover:opacity-0 group-hover:duration-0"
         >
-          <Live /> Live
+          <Live />
+          Live
         </div>
         <iframe
           height="1080px"
@@ -130,27 +104,4 @@ import Live from "./Live.astro";
       </div>
     </div>
   </div>
-
-  <div class="flex justify-start p-12 landscape:h-screen">
-    <div class="bottom-24 left-24 landscape:absolute">
-      <Socials
-        github="https://github.com/Anarios/return-youtube-dislike"
-        link="https://returnyoutubedislike.com"
-      />
-    </div>
-  </div>
-</section>
-
-<style>
-  .hoverer {
-    /* box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0); */
-    /* duration-0 */
-    /* transition: box-shadow 0s ease-in-out !important; */
-  }
-  .hoverer:hover {
-    z-index: 1;
-    /* hover:duration-500 */
-    transition: box-shadow 0.44s ease-in-out !important;
-    /* box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0.5); */
-  }
-</style>
+</Project>

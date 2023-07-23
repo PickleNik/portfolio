@@ -4,15 +4,19 @@ import Socials from "./Socials.astro";
 import Astr from "./tools/Astro.astro";
 import Htmx from "./tools/Htmx.astro";
 
-const response = await fetch("https://api.github.com/repos/picklenik/portfolio", {
-  headers: {Authentication: `Bearer ${import.meta.env.GH_TKN}`}
-});
-const data = await response.json();
-const stargazers = data.stargazers_count;
+// const response = await fetch(
+//   "https://api.github.com/repos/picklenik/portfolio",
+//   {
+//     headers: { Authentication: `Bearer ${import.meta.env.GH_TKN}` },
+//   }
+// );
+// const data = await response.json();
+// const stargazers = data.stargazers_count;
+const stargazers = 0;
 ---
 
 <section
-  class="relative flex min-h-screen w-full snap-center justify-between bg-gradient-to-b from-black via-black to-[#121212] portrait:flex-col landscape:items-center"
+  class="relative flex min-h-screen w-full snap-center justify-between overflow-x-hidden bg-gradient-to-b from-black via-black to-[#121212] portrait:flex-col landscape:items-center"
 >
   <div class="relative p-12 landscape:h-screen">
     <div
@@ -61,7 +65,7 @@ const stargazers = data.stargazers_count;
       src="/hub.png"
       alt="github mdx placeholder"
     /> -->
-    <div class="relative w-full skew-y-[15deg] md:-mt-20 md:ml-auto md:w-1/2">
+    <div class="relative w-full skew-y-12 md:-mt-20 md:ml-auto md:w-1/2">
       <div
         class="relative flex snap-x snap-mandatory flex-row-reverse gap-4 overflow-x-auto rounded-l-3xl px-48 py-8"
       >
