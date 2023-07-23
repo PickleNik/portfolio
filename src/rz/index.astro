@@ -1,14 +1,23 @@
 ---
-import Project from "./Project.astro";
+import Project from "../components/Project.astro";
 
-import LiveStatus from "./status/Live.astro";
-import Completed from "./status/Completed.astro";
+import LiveStatus from "../components/status/Live.astro";
+import Completed from "../components/status/Completed.astro";
 
-import Tailwind from "./tools/Tailwind.astro";
-import Firebase from "./tools/Firebase.astro";
-import Svelte from "./tools/Svelte.astro";
-import Socials from "./Socials.astro";
-import Live from "./Live.astro";
+import Tailwind from "../components/tools/Tailwind.astro";
+import Firebase from "../components/tools/Firebase.astro";
+import Svelte from "../components/tools/Svelte.astro";
+import Socials from "../components/Socials.astro";
+import Live from "../components/Live.astro";
+
+import { Image } from "astro:assets";
+import rz_mobile_main from "./rz_mobile_main.png";
+import rz_poggers from "./rz_poggers.png";
+import rz_funni from "./rz_funni.png";
+import rz_main from "./rz_main.png";
+import rz_card from "./rz_card.jpeg";
+import rz_cards from "./rz_cards.jpeg";
+import rz_mobile_roadmap from "./rz_mobile_roadmap.png";
 ---
 
 <Project class="bg-gradient-to-b from-[#121212] via-black to-black">
@@ -62,20 +71,20 @@ import Live from "./Live.astro";
     >
       <div class="flex w-1/4 flex-col justify-center gap-4">
         <div class="hoverer group rounded-2xl duration-300">
-          <img
+          <Image
             class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:translate-x-[160%] group-hover:scale-150"
             alt="RealZoo Home Page Mobile"
-            src="/rz_mobile_main.png"
+            src={rz_mobile_main}
           />
         </div>
       </div>
       <div class="flex w-2/4 flex-col items-center gap-4">
         <div class="flex max-w-full gap-4">
           <div class="hoverer group relative w-[60%] rounded-2xl duration-300">
-            <img
+            <Image
               class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:translate-x-[30%] group-hover:translate-y-[110%] group-hover:scale-[2.5]"
               alt="RealZoo Redesign Reaction"
-              src="/rz_poggers.png"
+              src={rz_poggers}
             />
             <div
               class="absolute bottom-2 left-2 flex items-center rounded-full bg-[#ff4444] pr-2 text-xs font-bold duration-1000 group-hover:opacity-0 group-hover:duration-0"
@@ -84,18 +93,18 @@ import Live from "./Live.astro";
             </div>
           </div>
           <div class="hoverer group w-[40%] rounded-xl duration-300">
-            <img
+            <Image
               class="pointer-events-none h-auto max-w-full rounded-xl border border-neutral-800 duration-500 group-hover:-translate-x-[100%] group-hover:translate-y-[110%] group-hover:scale-[2.5]"
               alt="RealZoo Breeding Popup"
-              src="/rz_funni.png"
+              src={rz_funni}
             />
           </div>
         </div>
         <div class="hoverer group relative rounded-2xl duration-500">
-          <img
+          <Image
             class="h-auto max-w-full rounded-2xl border border-neutral-800 duration-300 group-hover:scale-[2]"
             alt="RealZoo Home Page"
-            src="/rz_main.png"
+            src={rz_main}
           />
           <div
             class="absolute bottom-2 left-2 flex items-center rounded-full bg-[#ff4444] pr-2 text-xs font-bold duration-1000 group-hover:opacity-0 group-hover:duration-0"
@@ -111,17 +120,17 @@ import Live from "./Live.astro";
         </div>
         <div class="flex max-w-full gap-4">
           <div class="hoverer group w-[30%] rounded-2xl duration-300">
-            <img
+            <Image
               class="pointer-events-none h-48 rounded-xl border border-neutral-800 duration-500 group-hover:-translate-y-[115%] group-hover:translate-x-[110%] group-hover:scale-150"
               alt="RealZoo Card"
-              src="/rz_card.jpeg"
+              src={rz_card}
             />
           </div>
           <div class="hoverer group w-[70%] rounded-2xl duration-300">
-            <img
+            <Image
               class="pointer-events-none h-48 rounded-xl border border-neutral-800 duration-500 group-hover:-translate-x-[50%] group-hover:-translate-y-[115%] group-hover:scale-150"
               alt="RealZoo Cards"
-              src="/rz_cards.jpeg"
+              src={rz_cards}
             />
           </div>
         </div>
@@ -129,10 +138,10 @@ import Live from "./Live.astro";
 
       <div class="flex w-1/4 flex-col justify-center gap-4">
         <div class="hoverer group rounded-2xl duration-300">
-          <img
+          <Image
             class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-x-[160%] group-hover:scale-150"
             alt="RealZoo Roadmap Mobile"
-            src="/rz_mobile_roadmap.png"
+            src={rz_mobile_roadmap}
           />
         </div>
       </div>
