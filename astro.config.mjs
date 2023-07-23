@@ -6,7 +6,9 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   build: {
-    inlineStylesheets: 'always'
-  }
+    inlineStylesheets: "always",
+  },
+  experimental: {
+    assets: true,
+  },
 });
-
