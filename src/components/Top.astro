@@ -1,4 +1,9 @@
 ---
+import Project from "./Project.astro";
+
+import LiveStatus from "./status/Live.astro";
+import WorkInProgress from "./status/WIP.astro";
+
 import Tailwind from "./tools/Tailwind.astro";
 import Socials from "./Socials.astro";
 import Astr from "./tools/Astro.astro";
@@ -15,59 +20,44 @@ import Htmx from "./tools/Htmx.astro";
 const stargazers = 0;
 ---
 
-<section
-  class="relative flex min-h-screen w-full snap-center justify-between overflow-x-hidden bg-gradient-to-b from-black via-black to-[#121212] portrait:flex-col landscape:items-center"
+<Project
+  class="overflow-x-hidden bg-gradient-to-b from-black via-black to-[#121212]"
 >
-  <div class="relative p-12 landscape:h-screen">
-    <div
-      class="left-4 top-4 flex min-w-max flex-col items-start gap-4 lg:left-12 lg:top-12 xl:left-24 xl:top-24 landscape:absolute"
-    >
-      <h1 class="text-3xl font-bold md:text-5xl">PickleNik</h1>
-      <div class="flex gap-2">
-        <h2
-          class="rounded-full border-red-300 bg-red-500 bg-opacity-50 px-2 text-red-100"
-          style="text-shadow: 0 0 0.5rem #fecaca; box-shadow: inset 0 0 0.5rem #fecaca;"
-        >
-          Live
-        </h2>
-        <h2
-          class="rounded-full border border-teal-300 bg-teal-500 bg-opacity-50 px-2 text-teal-200"
-        >
-          Work In Progress
-        </h2>
-      </div>
-      <h3 class="opacity-50">Turning caffeine into software</h3>
-      <!-- <h1 class="font-mono text-4xl font-bold italic text-red-400">
-        PortfoLio
-      </h1> -->
-      <div class="flex gap-4">
-        <Astr />
-        <Tailwind />
-        <Htmx />
-      </div>
-    </div>
-  </div>
-
-  <div class="absolute right-12 top-12 lg:right-24 lg:top-24">
-    ⭐️ Stars
-    {stargazers}
-  </div>
-
-  <div
-    class="flex h-full w-full flex-col items-center justify-center text-neutral-400"
-  >
-    <!-- <h1 class="text-6xl font-bold">Hello World</h1>
+  <span slot="title">PickleNik</span>
+  <LiveStatus slot="status" />
+  <WorkInProgress slot="status" />
+  <span slot="description">Turning caffeine into software</span>
+  <Astr slot="stack" />
+  <Tailwind slot="stack" />
+  <Htmx slot="stack" />
+  <Socials
+    github="https://github.com/PickleNik"
+    discord="https://discord.com/users/714555429618843650"
+    twitter="https://twitter.com/picklenik0864"
+    mail="mailto:email@gmail.com"
+    kofi="https://ko-fi.com/picklenik"
+    slot="links"
+  />
+  <!-- <h1 class="text-6xl font-bold">Hello World</h1>
     <p class="text-xl">Lorem ipsum dolor sit amet consectetur.</p> -->
-    <!-- // todo: links navigate down to projects, mdx is pulled from github and rendered
+  <!-- // todo: links navigate down to projects, mdx is pulled from github and rendered
     by astro
     <img
       class="max-w-screen-md rounded-3xl landscape:w-1/2"
       src="/hub.png"
       alt="github mdx placeholder"
     /> -->
+  <div class="absolute right-12 top-12 lg:right-24 lg:top-24">
+    ⭐️ Stars
+    {stargazers}
+  </div>
+  <div
+    slot="aftertitle"
+    class="flex h-full w-full flex-col items-center justify-center text-neutral-400"
+  >
     <div class="relative w-full skew-y-12 md:-mt-20 md:ml-auto md:w-1/2">
       <div
-        class="relative flex snap-x snap-mandatory flex-row-reverse gap-4 overflow-x-auto rounded-l-3xl px-48 py-8"
+        class="relative flex snap-x snap-mandatory flex-row-reverse gap-4 overflow-x-auto rounded-l-3xl px-24 py-8"
       >
         <div class="flex snap-center flex-col gap-4">
           <b
@@ -151,18 +141,7 @@ const stargazers = 0;
       </div>
     </div>
   </div>
-  <div class="flex justify-center p-12">
-    <div class="bottom-24 left-24 landscape:absolute">
-      <Socials
-        github="https://github.com/PickleNik"
-        discord="https://discord.com/users/714555429618843650"
-        twitter="https://twitter.com/picklenik0864"
-        mail="mailto:email@gmail.com"
-        kofi="https://ko-fi.com/picklenik"
-      />
-    </div>
-  </div>
-</section>
+</Project>
 
 <style>
   .card2:hover {

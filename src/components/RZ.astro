@@ -1,0 +1,233 @@
+---
+import Project from "./Project.astro";
+
+import LiveStatus from "./status/Live.astro";
+import Completed from "./status/Completed.astro";
+
+import Tailwind from "./tools/Tailwind.astro";
+import Firebase from "./tools/Firebase.astro";
+import Svelte from "./tools/Svelte.astro";
+import Socials from "./Socials.astro";
+import Live from "./Live.astro";
+---
+
+<Project class="bg-gradient-to-b from-[#121212] via-black to-black">
+  <span
+    slot="title"
+    class="text-black"
+    style="text-shadow: -0.2rem -0.2rem #fff, 0.2rem 0.2rem #fff, -0.2rem 0.2rem #fff, 0.2rem -0.2rem #fff"
+  >
+    RealZoo
+  </span>
+  <Completed slot="status" />
+  <LiveStatus slot="status" />
+  <span slot="description"> A really fun game.</span>
+  <Svelte slot="stack" />
+  <Firebase slot="stack" />
+  <Tailwind slot="stack" />
+  <Socials
+    discord="https://discord.com/invite/B9HZVcWCau"
+    youtube="https://www.youtube.com/@realzoogame"
+    tiktok="https://www.tiktok.com/@realzoogame"
+    twitter="https://twitter.com/RealZooGame"
+    link="https://realzoo.itsyipy.com"
+    slot="links"
+  />
+
+  <div slot="middle" class="relative h-full w-full rounded-full bg-[#111]">
+    <div class="absolute h-full w-full overflow-hidden rounded-full">
+      <div
+        class="animate-blob absolute left-44 top-44 h-96 w-96 origin-bottom-right rounded-full bg-red-500 opacity-30"
+      >
+      </div>
+      <div
+        class="animate-blob absolute right-44 top-44 h-96 w-96 origin-bottom-left rounded-full bg-emerald-500 opacity-30"
+        style="animation-delay: 0.5s; animation-direction: reverse;"
+      >
+      </div>
+      <div
+        class="animate-blob absolute bottom-44 right-44 h-96 w-96 origin-top-left rounded-full bg-yellow-500 opacity-30"
+        style="animation-delay: 0.75s; animation-direction: alternate"
+      >
+      </div>
+      <div
+        class="animate-blob absolute bottom-44 left-44 h-96 w-96 origin-top-right rounded-full bg-indigo-500 opacity-30"
+        style="animation-delay: -1s; animation-direction: alternate-reverse;"
+      >
+      </div>
+    </div>
+    <div
+      class="flex h-[100.1%] w-[100.1%] items-center gap-4 rounded-[49.9%] backdrop-blur-3xl"
+      style="box-shadow: 0 0 5rem #fff2, inset 5rem 5rem 10rem -1rem #fff2, -5rem -5rem 10rem -1rem #0002;"
+    >
+      <div class="flex w-1/4 flex-col justify-center gap-4">
+        <div class="hoverer group rounded-2xl duration-300">
+          <img
+            class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:translate-x-[160%] group-hover:scale-150"
+            alt="RealZoo Home Page Mobile"
+            src="/rz_mobile_main.png"
+          />
+        </div>
+      </div>
+      <div class="flex w-2/4 flex-col items-center gap-4">
+        <div class="flex max-w-full gap-4">
+          <div class="hoverer group relative w-[60%] rounded-2xl duration-300">
+            <img
+              class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:translate-x-[30%] group-hover:translate-y-[110%] group-hover:scale-[2.5]"
+              alt="RealZoo Redesign Reaction"
+              src="/rz_poggers.png"
+            />
+            <div
+              class="absolute bottom-2 left-2 flex items-center rounded-full bg-[#ff4444] pr-2 text-xs font-bold duration-1000 group-hover:opacity-0 group-hover:duration-0"
+            >
+              <Live /> Live Redesign Reaction
+            </div>
+          </div>
+          <div class="hoverer group w-[40%] rounded-xl duration-300">
+            <img
+              class="pointer-events-none h-auto max-w-full rounded-xl border border-neutral-800 duration-500 group-hover:-translate-x-[100%] group-hover:translate-y-[110%] group-hover:scale-[2.5]"
+              alt="RealZoo Breeding Popup"
+              src="/rz_funni.png"
+            />
+          </div>
+        </div>
+        <div class="hoverer group relative rounded-2xl duration-500">
+          <img
+            class="h-auto max-w-full rounded-2xl border border-neutral-800 duration-300 group-hover:scale-[2]"
+            alt="RealZoo Home Page"
+            src="/rz_main.png"
+          />
+          <div
+            class="absolute bottom-2 left-2 flex items-center rounded-full bg-[#ff4444] pr-2 text-xs font-bold duration-1000 group-hover:opacity-0 group-hover:duration-0"
+          >
+            <Live /> Live
+          </div>
+          <iframe
+            height="1080px"
+            width="1920px"
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.21] rounded-[4rem] border-8 border-neutral-800 opacity-0 duration-300 group-hover:scale-50 group-hover:opacity-100"
+            src="https://realzoo.itsyipy.com/"
+            title="RealZoo"></iframe>
+        </div>
+        <div class="flex max-w-full gap-4">
+          <div class="hoverer group w-[30%] rounded-2xl duration-300">
+            <img
+              class="pointer-events-none h-48 rounded-xl border border-neutral-800 duration-500 group-hover:-translate-y-[115%] group-hover:translate-x-[110%] group-hover:scale-150"
+              alt="RealZoo Card"
+              src="/rz_card.jpeg"
+            />
+          </div>
+          <div class="hoverer group w-[70%] rounded-2xl duration-300">
+            <img
+              class="pointer-events-none h-48 rounded-xl border border-neutral-800 duration-500 group-hover:-translate-x-[50%] group-hover:-translate-y-[115%] group-hover:scale-150"
+              alt="RealZoo Cards"
+              src="/rz_cards.jpeg"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="flex w-1/4 flex-col justify-center gap-4">
+        <div class="hoverer group rounded-2xl duration-300">
+          <img
+            class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-x-[160%] group-hover:scale-150"
+            alt="RealZoo Roadmap Mobile"
+            src="/rz_mobile_roadmap.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="animate-star absolute left-44 top-12 h-1 w-1 rounded-full bg-amber-200"
+  >
+  </div>
+  <div
+    class="animate-star absolute left-12 top-44 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 1.25s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute left-20 top-12 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 4.33s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute left-80 top-44 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 6.55s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute bottom-12 left-20 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 7.66s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute bottom-80 left-20 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 1s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute right-80 top-44 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 3.55s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute bottom-36 right-20 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 8.66s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute bottom-44 right-20 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 2s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute right-12 top-20 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 9.55s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute right-44 top-96 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 4.66s;"
+  >
+  </div>
+  <div
+    class="animate-star absolute bottom-36 right-80 h-1 w-1 rounded-full bg-amber-200"
+    style="animation-delay: 3s;"
+  >
+  </div>
+</Project>
+
+<style>
+  /* filter: blur(1rem); */
+  .animate-star {
+    filter: blur(1px);
+    opacity: 0;
+    /* animation: star 5.1s infinite alternate; */
+  }
+  @keyframes star {
+    0% {
+      opacity: 0;
+      /* filter: blur(1rem); */
+      transform: scale(2);
+    }
+    100% {
+      opacity: 1;
+      /* filter: blur(1px); */
+      transform: scale(1);
+    }
+  }
+  .animate-blob {
+    animation: blob 10s linear infinite;
+  }
+  @keyframes blob {
+    0% {
+      rotate: 0deg;
+    }
+    100% {
+      rotate: 360deg;
+    }
+  }
+</style>

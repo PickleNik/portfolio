@@ -1,0 +1,87 @@
+---
+import Project from "./Project.astro";
+
+import Completed from "./status/Completed.astro";
+import Offline from "./status/Offline.astro";
+
+import Tailwind from "./tools/Tailwind.astro";
+import Vue from "./tools/Vue.astro";
+---
+
+<Project class="bg-[hsl(192,53%,8%)]">
+  <span slot="title" class="font-bold uppercase tracking-[1rem] text-[#c4e5ec]">
+    Serenity
+  </span>
+  <Completed slot="status" />
+  <Offline slot="status" />
+  <span slot="description">A landing page.</span>
+  <Vue slot="stack" />
+  <Tailwind slot="stack" />
+  <div
+    slot="middle"
+    class="relative mx-auto flex h-full w-full items-center justify-center gap-4 rounded-full"
+    style="box-shadow: 0 0 15rem 3rem #1e5462"
+  >
+    <div class="flex w-3/4 flex-col items-center gap-4">
+      <div class="hoverer group relative rounded-2xl duration-500">
+        <img
+          class="h-auto max-w-full rounded-3xl duration-300 group-hover:scale-150"
+          alt="Serenity Home Page"
+          src="/serenity_main.png"
+        />
+        <div
+          class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full bg-[#1e5462] p-2 text-xs font-bold text-white duration-1000 group-hover:opacity-0 group-hover:duration-0"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 fill-current"
+            viewBox="0 -960 960 960"
+          >
+            <path
+              d="M366-232q-15 10-30.5 1T320-258v-450q0-18 15.5-27t30.5 1l354 226q14 9 14 25t-14 25L366-232Z"
+            ></path>
+          </svg>
+        </div>
+        <!-- <video
+        height="1080px"
+        width="1920px"
+        autoplay
+        loop
+        class="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-3xl opacity-0 duration-300 group-hover:scale-150 group-hover:opacity-100"
+        src="/serenity.mov"></video> -->
+        <!-- TODO: only autoplay on hover -->
+      </div>
+    </div>
+
+    <!-- <div class="flex w-1/4 flex-col justify-center gap-4"> -->
+    <!-- TODO: show mobile video on mobile in the middle (code above) -->
+    <!-- <div class="hoverer group relative rounded-2xl duration-300">
+      <img
+        class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-x-[160%] group-hover:scale-150"
+        alt="Serenity Mobile Home Page"
+        src="/serenity_mobile_main.png"
+      />
+      <div
+        class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full bg-[#1e5462] p-2 text-xs font-bold text-white duration-1000 group-hover:opacity-0 group-hover:duration-0"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 fill-current"
+          viewBox="0 -960 960 960"
+        >
+          <path
+            d="M366-232q-15 10-30.5 1T320-258v-450q0-18 15.5-27t30.5 1l354 226q14 9 14 25t-14 25L366-232Z"
+          ></path>
+        </svg>
+      </div>
+      <video
+        width="1080px"
+        height="1920px"
+        autoplay
+        loop
+        class="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-2xl opacity-0 duration-300 group-hover:-translate-x-[210%] group-hover:scale-150 group-hover:opacity-100"
+        src="/serenity_mobile.mov"></video>
+    </div>-->
+    <!-- </div> -->
+  </div>
+</Project>

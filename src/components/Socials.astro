@@ -33,7 +33,7 @@ const { github, discord, twitter, youtube, tiktok, mail, kofi, link } =
         <a
           href={discord}
           class={`group rounded-lg p-2 ${
-            twitter
+            twitter || link
               ? Object.keys(Astro.props)[0] == "discord"
                 ? "rounded-l-3xl pl-[0.66rem] hover:rounded-r-xl"
                 : "hover:rounded-xl"

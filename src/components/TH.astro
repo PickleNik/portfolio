@@ -1,50 +1,34 @@
 ---
+import Project from "./Project.astro";
+
+import Offline from "./status/Offline.astro";
+import WorkInProgress from "./status/WIP.astro";
+
 import Tailwind from "./tools/Tailwind.astro";
 import React from "./tools/React.astro";
 import Next from "./tools/Next.astro";
 import Prisma from "./tools/Prisma.astro";
+
+import Socials from "./Socials.astro";
 ---
 
-<section
-  class="relative flex min-h-screen w-full snap-center justify-between portrait:flex-col landscape:items-center"
->
-  <div class="relative p-12 landscape:h-screen">
-    <div
-      class="left-4 top-4 flex min-w-max flex-col items-start gap-4 lg:left-12 lg:top-12 xl:left-24 xl:top-24 landscape:absolute"
-    >
-      <h1 class="text-3xl font-bold leading-3 md:text-5xl">
-        type <br /> hero
-      </h1>
-      <div class="flex gap-2">
-        <!-- TODO: move to emvoice -->
-        <!-- <h2
-          class="rounded-full border border-yellow-300 bg-yellow-500 bg-opacity-50 px-2"
-        >
-          Prototype
-        </h2> -->
-        <h2
-          class="rounded-full border border-neutral-300 bg-neutral-500 bg-opacity-50 px-2"
-        >
-          Offline
-        </h2>
-        <h2
-          class="rounded-full border border-cyan-300 bg-cyan-500 bg-opacity-50 px-2"
-        >
-          Work In Progress
-        </h2>
-      </div>
-      <h3 class="opacity-50">Typescript challenges platform</h3>
-      <div class="flex gap-4">
-        <Next />
-        <Prisma />
-        <React />
-        <Tailwind />
-      </div>
-    </div>
-  </div>
-  <!-- middle -->
+<Project class="overflow-x-hidden">
+  <span slot="title" class="leading-[0.75em]">type <br /> hero</span>
+  <Offline slot="status" />
+  <WorkInProgress slot="status" />
+  <span slot="description"> Typescript challenges platform;</span>
+  <Next slot="stack" />
+  <Prisma slot="stack" />
+  <React slot="stack" />
+  <Tailwind slot="stack" />
+  <Socials
+    discord="https://discord.gg/trashdev"
+    link="https://typehero.dev"
+    slot="links"
+  />
   <div
-    class="relative mx-auto flex h-[90dvh] w-[90dvh] items-center justify-center gap-4 rounded-full border-2 border-double border-neutral-800 ring ring-neutral-800 ring-offset-8 ring-offset-black portrait:h-[90dvw] portrait:w-[90dvw]"
+    slot="middle"
+    class="relative mx-auto flex h-full w-full items-center justify-center gap-4 rounded-full border-2 border-double border-neutral-800 ring ring-neutral-800 ring-offset-8 ring-offset-black"
   >
     <div
       class="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-md"
@@ -111,91 +95,16 @@ import Prisma from "./tools/Prisma.astro";
         d="M510.93 197.945L491.961 205.711L488.319 196.577L521.13 183.144L524.601 191.849L518.812 194.219L518.966 194.605C521.165 194.553 523.161 195.157 524.956 196.417C526.765 197.672 528.157 199.522 529.131 201.966C530.043 204.253 530.339 206.451 530.021 208.56C529.702 210.669 528.805 212.575 527.33 214.276C525.869 215.972 523.864 217.341 521.315 218.385L500.423 226.938L496.782 217.804L516.05 209.916C518.063 209.108 519.425 207.952 520.134 206.448C520.857 204.938 520.854 203.268 520.125 201.438C519.634 200.209 518.938 199.231 518.035 198.503C517.138 197.79 516.078 197.375 514.856 197.26C513.654 197.154 512.345 197.382 510.93 197.945Z"
         fill="none"></path>
     </svg>
-
-    <div class="flex w-3/4 flex-col items-center gap-4">
-      <div class="hoverer group relative rounded-2xl duration-500">
-        <!-- <img
-          class="h-auto max-w-full rounded-3xl duration-300 group-hover:scale-150"
-          alt="Serenity Home Page"
-          src="/serenity_main.png"
-        /> -->
-        <!-- <div
-          class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full bg-[#1e5462] p-2 text-xs font-bold text-white duration-1000 group-hover:opacity-0 group-hover:duration-0"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 fill-current"
-            viewBox="0 -960 960 960"
-          >
-            <path
-              d="M366-232q-15 10-30.5 1T320-258v-450q0-18 15.5-27t30.5 1l354 226q14 9 14 25t-14 25L366-232Z"
-            ></path>
-          </svg>
-        </div> -->
-        <!-- <video
-          height="1080px"
-          width="1920px"
-          autoplay
-          loop
-          class="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-3xl opacity-0 duration-300 group-hover:scale-150 group-hover:opacity-100"
-          src="/serenity.mov"></video> -->
-        <!-- TODO: only autoplay on hover -->
-      </div>
-    </div>
-
-    <!-- <div class="flex w-1/4 flex-col justify-center gap-4"> -->
-    <!-- TODO: show mobile video on mobile in the middle (code above) -->
-    <!-- <div class="hoverer group relative rounded-2xl duration-300">
-        <img
-          class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-x-[160%] group-hover:scale-150"
-          alt="Serenity Mobile Home Page"
-          src="/serenity_mobile_main.png"
-        />
-        <div
-          class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full bg-[#1e5462] p-2 text-xs font-bold text-white duration-1000 group-hover:opacity-0 group-hover:duration-0"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6 fill-current"
-            viewBox="0 -960 960 960"
-          >
-            <path
-              d="M366-232q-15 10-30.5 1T320-258v-450q0-18 15.5-27t30.5 1l354 226q14 9 14 25t-14 25L366-232Z"
-            ></path>
-          </svg>
-        </div>
-        <video
-          width="1080px"
-          height="1920px"
-          autoplay
-          loop
-          class="absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 rounded-2xl opacity-0 duration-300 group-hover:-translate-x-[210%] group-hover:scale-150 group-hover:opacity-100"
-          src="/serenity_mobile.mov"></video>
-      </div>-->
-    <!-- </div> -->
   </div>
-
-  <div class="flex justify-start p-12 landscape:h-screen"></div>
-</section>
+</Project>
 
 <style>
-  .hoverer {
-    box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0);
-    /* duration-0 */
-    transition: box-shadow 0s ease-in-out !important;
-  }
-  .hoverer:hover {
-    z-index: 1;
-    /* hover:duration-500 */
-    transition: box-shadow 0.25s ease-in-out !important;
-    box-shadow: 0 0 0 100dvw rgba(0, 0, 0, 0.5);
-  }
   @keyframes spin {
     to {
       transform: rotate(360deg);
     }
   }
-  /* .animate-myspin {
+  .animate-myspin {
     animation: spin 15s linear infinite;
-  } */
+  }
 </style>

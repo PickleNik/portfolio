@@ -1,14 +1,22 @@
+---
+const { class: className } = Astro.props;
+---
+
 <!-- scale-50 hover:scale-100 rounded-[5rem] hover:rounded-none duration-300 -->
 <section
-  class="relative flex min-h-screen w-full snap-start justify-between bg-[#121212] hover:rounded-none portrait:flex-col landscape:items-center"
+  class:list={[
+    "relative flex min-h-screen w-full snap-start justify-between portrait:flex-col landscape:items-center",
+    className,
+  ]}
 >
+  <slot />
   <!-- left -->
-  <div class="relative portrait:p-12 landscape:h-screen">
+  <div class="relative portrait:px-12 portrait:pt-12 landscape:h-screen">
     <div
       class="left-4 top-4 flex flex-col items-start gap-4 lg:left-12 lg:top-12 xl:left-24 xl:top-24 landscape:absolute landscape:w-[calc((100vw-80vh)/2-1rem)] landscape:2xl:w-[calc((100vw-90vh)/2-6rem)]"
     >
       <h1
-        class="-mt-2 flex text-3xl font-bold lg:text-5xl landscape:w-[calc((100vw-80vh)/2+6rem)] landscape:2xl:w-[calc((100vw-90vh)/2+1rem)]"
+        class="-mt-2 flex text-3xl font-bold md:text-4xl lg:text-5xl landscape:w-[calc((100vw-80vh)/2+6rem)] landscape:2xl:w-[calc((100vw-90vh)/2+1rem)]"
       >
         <slot name="title" />
       </h1>
@@ -30,12 +38,15 @@
   <!-- !! modified label -->
   <!-- middle -->
   <!-- TODO: add interactive (touch) and sound icons and labels bottom left of card -->
-  <div class="mx-auto aspect-square w-[80vh] 2xl:w-[90vh] portrait:w-[90vw]">
-    <slot />
-  </div>
-
+  <slot name="aftertitle">
+    <div
+      class="mx-auto aspect-square w-[80vh] 2xl:w-[90vh] portrait:w-[90vw] portrait:md:w-[70vw]"
+    >
+      <slot name="middle" />
+    </div>
+  </slot>
   <!-- right -->
-  <div class="flex portrait:justify-center portrait:p-12 landscape:h-screen">
+  <div class="flex portrait:px-12 portrait:pb-12 landscape:h-screen">
     <div class="bottom-12 left-12 xl:bottom-24 xl:left-24 landscape:absolute">
       <slot name="links" />
     </div>
@@ -44,14 +55,16 @@
 
 <style is:global>
   .hoverer {
-    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0);
+    /* box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0); */
     /* duration-0 */
-    transition: box-shadow 0.22s ease-in-out !important;
+    /* transition: box-shadow 0s ease-in-out !important; */
+    transition: all 0.3s linear;
   }
   .hoverer:hover {
+    background: #fff2;
     z-index: 1;
     /* hover:duration-500 */
-    transition: box-shadow 0.44s ease-in-out !important;
-    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+    /* transition: box-shadow 0.44s ease-in-out !important; */
+    /* box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5); */
   }
 </style>

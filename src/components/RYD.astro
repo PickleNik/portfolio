@@ -10,7 +10,7 @@ import Nuxt from "./tools/Nuxt.astro";
 import Live from "./Live.astro";
 ---
 
-<Project>
+<Project class="bg-[#121212]">
   <span slot="title">Return YouTube Dislike</span>
   <Completed slot="status" />
   <LiveStatus slot="status" />
@@ -27,6 +27,7 @@ import Live from "./Live.astro";
   />
 
   <div
+    slot="middle"
     class="relative z-10 mx-auto flex h-full w-full items-center gap-4 rounded-full bg-[#f222]"
     style="box-shadow: 0 0 15rem 3rem #f222, inset -15rem -15rem 15rem 0 #0008, inset 12rem 12rem 0 #fff8"
   >
