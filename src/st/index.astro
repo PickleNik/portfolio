@@ -1,11 +1,15 @@
 ---
-import Project from "./Project.astro";
+import Project from "../components/Project.astro";
 
-import Completed from "./status/Completed.astro";
-import Offline from "./status/Offline.astro";
+import Completed from "../components/status/Completed.astro";
+import Offline from "../components/status/Offline.astro";
 
-import Tailwind from "./tools/Tailwind.astro";
-import Vue from "./tools/Vue.astro";
+import Tailwind from "../components/tools/Tailwind.astro";
+import Vue from "../components/tools/Vue.astro";
+
+import { Image } from "astro:assets";
+import serenity_main from "./serenity_main.png";
+import serenity_mobile_main from "./serenity_mobile_main.png";
 ---
 
 <Project class="bg-[hsl(192,53%,8%)]">
@@ -24,10 +28,10 @@ import Vue from "./tools/Vue.astro";
   >
     <div class="flex w-3/4 flex-col items-center gap-4">
       <div class="hoverer group relative rounded-2xl duration-500">
-        <img
+        <Image
           class="h-auto max-w-full rounded-3xl duration-300 group-hover:scale-150"
           alt="Serenity Home Page"
-          src="/serenity_main.png"
+          src={serenity_main}
         />
         <div
           class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full bg-[#1e5462] p-2 text-xs font-bold text-white duration-1000 group-hover:opacity-0 group-hover:duration-0"
@@ -56,10 +60,10 @@ import Vue from "./tools/Vue.astro";
     <!-- <div class="flex w-1/4 flex-col justify-center gap-4"> -->
     <!-- TODO: show mobile video on mobile in the middle (code above) -->
     <!-- <div class="hoverer group relative rounded-2xl duration-300">
-      <img
+      <Image
         class="pointer-events-none h-auto max-w-full rounded-2xl border border-neutral-800 duration-500 group-hover:-translate-x-[160%] group-hover:scale-150"
         alt="Serenity Mobile Home Page"
-        src="/serenity_mobile_main.png"
+        src={serenity_mobile_main}
       />
       <div
         class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center rounded-full bg-[#1e5462] p-2 text-xs font-bold text-white duration-1000 group-hover:opacity-0 group-hover:duration-0"
