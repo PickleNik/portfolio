@@ -11,7 +11,7 @@ import NavIsland from "../components/NavIsland.astro";
 import Socials from "../components/Socials.astro";
 ---
 
-<html lang="en" class="snap-y snap-mandatory scroll-smooth bg-black">
+<html lang="en" class="scroll-smooth snap-y snap-mandatory bg-black">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -64,3 +64,13 @@ import Socials from "../components/Socials.astro";
     </footer>
   </body>
 </html>
+
+<style is:global>
+  html, body {
+    overscroll-behavior-y: none;
+  }
+  /* hide scrollbar */
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+</style>

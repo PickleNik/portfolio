@@ -1,11 +1,12 @@
 ---
-const { class: className } = Astro.props;
+const { id, class: className } = Astro.props;
 ---
 
 <!-- scale-50 hover:scale-100 rounded-[5rem] hover:rounded-none duration-300 -->
 <section
+  id={id}
   class:list={[
-    "relative flex min-h-screen w-full snap-start justify-between portrait:flex-col landscape:items-center",
+    "relative flex min-h-screen w-full snap-center justify-between portrait:flex-col landscape:items-center",
     className,
   ]}
 >
