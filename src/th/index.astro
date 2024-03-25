@@ -12,7 +12,52 @@ import Prisma from "../components/tools/Prisma.astro";
 import Socials from "../components/Socials.astro";
 ---
 
-<Project id="typehero" class="overflow-hidden">
+<Project id="typehero" class="overflow-hidden bg-black">
+    <!-- !! color logo -->
+  <!-- <span
+    slot="title"
+    class="flex items-center gap-2 bg-gradient-to-r from-[#3178c6] from-[5rem] to-white bg-clip-text leading-[0.75em] text-transparent"
+  >
+    <svg
+      fill="none"
+      viewBox="0 0 164 164"
+      class="h-12 w-12 rounded-xl md:h-16 md:w-16 lg:h-20 lg:w-20 lg:rounded-2xl"
+      xmlns="http://www.w3.org/2000/svg"
+      ><path
+        d="M0 29.8182C0 13.3501 13.3501 0 29.8182 0H134.182C150.65 0 164 13.3501 164 29.8182V134.182C164 150.65 150.65 164 134.182 164H29.8182C13.3501 164 0 150.65 0 134.182V29.8182Z"
+        fill="#3178C6"></path><path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M71.4351 80.307H91.9394V67.0909H34.7879V80.307H55.1919V139.152H71.4351V80.307Z"
+        fill="white"></path><path
+        d="M91.9394 139.152V67.0909H106.946V96.9549H129.078V67.0909H144.121V139.152H129.078V109.182H106.946V139.152H91.9394Z"
+        fill="white"></path></svg
+    >
+    <div class="-mt-1">
+      type <br /> hero
+    </div>
+  </span> -->
+  <!-- !! no-color logo -->
+  <!-- <span slot="title" class="flex items-center gap-2 leading-[0.75em]">
+    <svg
+      fill="none"
+      viewBox="0 0 164 164"
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-12 w-12 rounded-xl border stroke-2 md:h-16 md:w-16 lg:h-20 lg:w-20 lg:rounded-2xl"
+      ><path
+        d="M0 29.8182C0 13.3501 13.3501 0 29.8182 0H134.182C150.65 0 164 13.3501 164 29.8182V134.182C164 150.65 150.65 164 134.182 164H29.8182C13.3501 164 0 150.65 0 134.182V29.8182Z"
+      ></path><path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M71.4351 80.307H91.9394V67.0909H34.7879V80.307H55.1919V139.152H71.4351V80.307Z"
+        fill="white"></path><path
+        d="M91.9394 139.152V67.0909H106.946V96.9549H129.078V67.0909H144.121V139.152H129.078V109.182H106.946V139.152H91.9394Z"
+        fill="white"></path></svg
+    >
+    <div class="-mt-1">
+      type <br /> hero
+    </div>
+  </span> -->
   <span slot="title" class="leading-[0.75em]">type <br /> hero</span>
   <Offline slot="status" />
   <WorkInProgress slot="status" />

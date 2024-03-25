@@ -24,9 +24,10 @@ const stargazers = 0;
 ---
 
 <Project
-  class="overflow-x-hidden bg-gradient-to-b from-black via-black to-[#121212]"
+  class="overflow-x-hidden bg-gradient-to-b from-neutral-950 via-neutral-950 to-[#121212]"
 >
-  <img src="/logo.svg" class="absolute top-0 left-0 scale-[1.75] opacity-10" />
+
+  <img src="/logo.svg" class="absolute top-24 left-24 scale-[0.75] z-10 opacity-30 bakcdrop-blur-xl [mask-image:linear-gradient(135deg,transparent,white_69%)]" />
   <span slot="title">PickleNik</span>
   <WorkInProgress slot="status" />
   <LiveStatus slot="status" />
@@ -57,15 +58,16 @@ const stargazers = 0;
   </div>
   <div
     slot="aftertitle"
-    class="flex h-full w-full flex-col items-center justify-center text-neutral-400"
+    class="flex z-50 h-full w-full flex-col items-center justify-center text-neutral-400"
   >
     <div class="relative w-full skew-y-12 md:-mt-20 md:ml-auto md:w-3/4">
       <div
         class="relative flex snap-x snap-mandatory flex-row-reverse gap-4 overflow-x-auto scrollbar-hidden pr-24 py-8 [mask-image:linear-gradient(to_right,transparent,white_69%)]"
       >
-        <div class="flex snap-center flex-col justify-end gap-4">
+        <div class="relative flex snap-center flex-col justify-end gap-4 bg-gradient-to-br from-indigo-400/30 via-pink-300/60 to-yellow-100/50 backdrop-blur-md rounded-3xl p-4">
+          <div class="absolute h-full w-full blur-lg scale-95 -z-10 top-4 flex snap-center flex-col justify-end gap-4 bg-gradient-to-br from-indigo-400/30 via-pink-300/60 to-yellow-100/50 rounded-[3rem] p-4 shadow-[1rem_1rem_1rem_-0.25rem_#fef9c344]"></div>
           <b
-            class="-mb-2 flex max-w-min items-center bg-gradient-to-r from-indigo-400 from-35% via-pink-400 to-orange-400 bg-clip-text pl-2 text-xl font-bold text-transparent"
+            class="-mb-2 flex max-w-min items-center bg-gradient-to-r from-indigo-400 from-35% via-pink-400 to-orange-400 bg-clip-text text-xl font-bold text-transparent"
           >
             <svg
               fill="currentColor"
@@ -223,21 +225,25 @@ const stargazers = 0;
           <div
             class="h-48 w-96 cursor-pointer rounded-2xl border border-neutral-600 bg-neutral-800 duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:border-neutral-400 hover:bg-neutral-700"
           >
-            Enly Shop
+            Enly App
           </div>
           <div
             class="h-48 w-96 cursor-pointer rounded-2xl border border-neutral-600 bg-neutral-800 duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:border-neutral-400 hover:bg-neutral-700"
           >
-            Enly App
+            Enly Shop
           </div>
         </div>
         <div class="flex snap-center flex-col justify-end gap-4">
           <!-- todo: text-gradient -->
           <b class="-mb-2 pl-2 text-xl font-bold">2017</b>
           <div
-            class="h-48 w-96 cursor-pointer rounded-2xl border border-neutral-600 bg-neutral-800 duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:border-neutral-400 hover:bg-neutral-700"
+            class="h-48 w-96 cursor-pointer rounded-2xl hover:rounded-3xl border border-slate-600 bg-slate-800 duration-300 hover:scale-95 hover:border-emerald-400/40 hover:bg-emerald-300/30 relative overflow-hidden grid place-items-center group"
           >
-            Joined GitHub
+            <img src="https://github.githubassets.com/assets/profile-joined-github-dark-6369d0efb8b9.svg" class="h-full w-full bottom-0 -z-0 absolute [mask-image:radial-gradient(ellipse_at_center,transparent,white)] duration-300 group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:scale-110 brightness-150 contrast-150" alt="Joined GitHub!">
+            <div class="z-10 duration-300 group-hover:scale-150 group-hover:translate-y-1 group-hover:translate-x-1">
+              <h4 class="text-emerald-500 group-hover:text-emerald-300 duration-300 font-bold">Joined GitHub</h4>
+              <time class="text-xs group-hover:text-blue-400 hover:shadow-xl font-medium duration-300">on August 17, 2017</time>
+            </div>
           </div>
         </div>
         <div class="flex snap-center flex-col justify-center items-center">
