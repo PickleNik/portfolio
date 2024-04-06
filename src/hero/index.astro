@@ -26,7 +26,6 @@ const stargazers = 0;
 <Project
   class="overflow-x-hidden bg-gradient-to-b from-neutral-950 via-neutral-950 to-[#121212]"
 >
-
   <img src="/logo.svg" class="absolute top-24 left-24 scale-[0.75] z-10 opacity-30 bakcdrop-blur-xl [mask-image:linear-gradient(135deg,transparent,white_69%)]" />
   <span slot="title">PickleNik</span>
   <WorkInProgress slot="status" />
@@ -58,7 +57,7 @@ const stargazers = 0;
   </div>
   <div
     slot="aftertitle"
-    class="flex z-50 h-full w-full flex-col items-center justify-center text-neutral-400"
+    class="flex opacity-0 animate-fadein z-50 h-full w-full flex-col items-center justify-center text-neutral-400"
   >
     <div class="relative w-full skew-y-12 md:-mt-20 md:ml-auto md:w-3/4">
       <div
@@ -254,9 +253,63 @@ const stargazers = 0;
       </div>
     </div>
   </div>
+  
+  <div class="animate-fadeout z-40 w-full h-full backdrop-blur-lg absolute top-0 left-0 grid place-content-center bg-black/50">
+    <img src="/logo.svg" class="animate-deblur opacity-50 z-50 bakcdrop-blur-xl" />
+  </div>
 </Project>
 
 <style>
+
+  .animate-deblur {
+    filter: blur(1rem);
+    transform-origin: center !important;
+    animation: deblur 1.75s ease forwards;
+  }
+  @keyframes deblur {
+    0% {
+      transform: scale(0.5) rotate(90deg);
+      filter: blur(1rem);
+    }
+    20% {
+      transform: scale(1.75) rotate(0deg);
+      filter: blur(0);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.25) rotate(-90deg);
+      filter: blur(0);
+    }
+  }
+
+  .animate-fadeout {
+    backdrop-filter: blur(1rem);
+    animation: fadeOut 1.5s ease-in-out forwards;
+  }
+  @keyframes fadeOut {
+    from {
+      backdrop-filter: blur(1rem);
+      opacity: 1;
+    }
+    to {
+      backdrop-filter: blur(0) !important;
+      opacity: 0;
+    }
+  }
+  .animate-fadein {
+    transform: translate(-1rem, -0.25rem);
+    animation: fadeIn 0.6s 1s ease-in-out forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      transform: translate(-1rem, -0.25rem);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
   .card2:hover {
     box-shadow: 0 0 1.5rem #4fd1c5;
   }
