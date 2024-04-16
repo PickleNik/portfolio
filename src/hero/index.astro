@@ -228,10 +228,11 @@ const stargazers = 0;
             Enly App
           </div>
           <div
-            class="h-48 w-96 cursor-pointer rounded-3xl hover:rounded-3xl border border-amber-400/0 duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:border-amber-400 grid place-items-center text-4xl font-bold font-serif text-white relative overflow-hidden hover:shadow-[0.5rem_0.5rem_0rem_0rem_#f59e0b88] active:duration-75 active:translate-x-0 active:translate-y-0 active:scale-100 active:shadow-none"
+            class="h-48 w-96 cursor-pointer rounded-3xl hover:rounded-3xl border border-amber-400/0 duration-300 hover:-translate-x-1 hover:-translate-y-1 hover:border-amber-400 grid place-items-center text-4xl font-bold font-serif text-white relative overflow-hidden hover:shadow-[0.5rem_0.5rem_0rem_0rem_#f59e0b88] active:duration-75 active:translate-x-0 active:translate-y-0 active:scale-100 active:shadow-none group"
           >
-            <div class="absolute bg-[url('https://images.unsplash.com/photo-1483181994834-aba9fd1e251a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')] bg-center bg-cover bg-no-repeat w-full h-full top-0 left-0 -z-10 opacity-30 blur-sm"></div>
-            <div>Enly Shop</div>
+            <div class="absolute bg-[url('https://images.unsplash.com/photo-1483181994834-aba9fd1e251a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')] bg-center bg-cover bg-no-repeat w-full h-full top-0 left-0 -z-10 opacity-30 blur-sm group-hover:blur-0 duration-300"></div>
+            <div class="duration-300 z-20 group-hover:translate-y-1 group-hover:-translate-x-1 shadow-md">Enly Shop</div>
+            <div class="duration-300 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-amber-400">Enly Shop</div>
           </div>
         </div>
         <div class="flex snap-center flex-col justify-end gap-4">
@@ -293,6 +294,7 @@ const stargazers = 0;
     }
     to {
       backdrop-filter: blur(0) !important;
+      pointer-events: none;
       opacity: 0;
     }
   }
